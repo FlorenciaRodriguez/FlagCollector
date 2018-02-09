@@ -1,0 +1,4 @@
+obj\Release\_Habituación.g.cs
+obj\Release\HabituacionWF.g.cs
+obj\Release\Habituación_Activity1_BeforeInitializeComponentHelper.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Release\Habituación_Activity1_CompiledExpressionRoot.cs

@@ -1,0 +1,4 @@
+obj\Debug\_ProtocoloSimple.g.cs
+obj\Debug\Activity1.g.cs
+obj\Debug\ProtocoloSimple_Activity1_BeforeInitializeComponentHelper.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\ProtocoloSimple\obj\Debug\ProtocoloSimple_Activity1_CompiledExpressionRoot.cs

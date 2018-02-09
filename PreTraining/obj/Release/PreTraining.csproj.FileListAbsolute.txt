@@ -1,0 +1,17 @@
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining.csprojResolveAssemblyReference.cache
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining.g.xaml
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining_PreTraining_BeforeInitializeComponentHelper.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\_PreTraining.g.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining.g.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining_PreTraining_BeforeInitializeComponentHelper.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\bin\Release\PreTraining.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\bin\Release\PreTraining.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\bin\Release\ProtocoloSimple.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\bin\Release\ProtocoloSimple.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining.csproj.FileListAbsolute.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\PreTraining_PreTraining_CompiledExpressionRoot.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Release\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml

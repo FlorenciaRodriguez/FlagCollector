@@ -1,0 +1,1457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<e:Ejercicio xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:e="clr-namespace:Ejercicio;assembly=Ejercicio" xmlns:f="clr-namespace:FlagCollectorWorkflowActivities;assembly=ProtocoloSimple" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Drawing</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>ProtocoloSimple</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Ejercicio</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <e:Ejercicio.Implementation>
+    <StateMachine>
+      <StateMachine.InitialState>
+        <State x:Name="__ReferenceID13" DisplayName="SetUp">
+          <State.Entry>
+            <Sequence DisplayName="Inicializar Variables">
+              <Sequence DisplayName="Elementos de Salida">
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="scg:List(x:String)">
+                      <mca:CSharpReference x:TypeArguments="scg:List(x:String)">Reporte</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="scg:List(x:String)">
+                      <mca:CSharpValue x:TypeArguments="scg:List(x:String)">new List&lt;string&gt;()</mca:CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="scg:List(x:String)">
+                      <mca:CSharpReference x:TypeArguments="scg:List(x:String)">Recorrido</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="scg:List(x:String)">
+                      <mca:CSharpValue x:TypeArguments="scg:List(x:String)">new List&lt;string&gt;()</mca:CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+              <Sequence DisplayName="Variables del ejercicio">
+                <Assign DisplayName="Cantidad de banderas recolectadas del par">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32">IRecoleccion</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign DisplayName="Cantidad de Iteraciones">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32">Iteracion</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign DisplayName="Maximo de Iteraciones">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32">MaxIteracion</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpValue x:TypeArguments="x:Int32">Angulo.Length</mca:CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32">Cercania</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="sd:PointF">
+                      <mca:CSharpReference x:TypeArguments="sd:PointF">Cruz</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="sd:PointF">
+                      <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(0,0)</mca:CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </Sequence>
+          </State.Entry>
+          <State.Exit>
+            <Sequence DisplayName="Reporte">
+              <AddToCollection x:TypeArguments="x:String" DisplayName="Nombre de Sujeto">
+                <AddToCollection.Item>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">"Sujeto;"+Sujeto</mca:CSharpValue>
+                  </InArgument>
+                </AddToCollection.Item>
+                <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                  <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                </InArgument>
+              </AddToCollection>
+              <AddToCollection x:TypeArguments="x:String" DisplayName="Radio">
+                <AddToCollection.Item>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">"Radio;"+Radio.ToString()</mca:CSharpValue>
+                  </InArgument>
+                </AddToCollection.Item>
+                <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                  <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                </InArgument>
+              </AddToCollection>
+              <AddToCollection x:TypeArguments="x:String" DisplayName="Hora Inicio">
+                <AddToCollection.Item>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">"Hora Inicio;"+DateTime.Now.ToString()</mca:CSharpValue>
+                  </InArgument>
+                </AddToCollection.Item>
+                <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                  <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                </InArgument>
+              </AddToCollection>
+            </Sequence>
+          </State.Exit>
+          <State.Transitions>
+            <Transition DisplayName="Iniciar Experimento">
+              <Transition.Trigger>
+                <Sequence DisplayName="Recibir Coordenadas">
+                  <f:ReadString BookmarkName="RtaCave">
+                    <f:ReadString.Result>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                      </OutArgument>
+                    </f:ReadString.Result>
+                  </f:ReadString>
+                  <If DisplayName="Es un movimiento de joystick o apreto un boton">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Split(';').Length&gt;1</mca:CSharpValue>
+                      </InArgument>
+                    </If.Condition>
+                    <If.Then>
+                      <Assign>
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="sd:PointF">
+                            <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                          </OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="sd:PointF">
+                            <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                          </InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </Transition.Trigger>
+              <Transition.To>
+                <State x:Name="__ReferenceID3" DisplayName="Detenido">
+                  <State.Entry>
+                    <Sequence>
+                      <Sequence DisplayName="Cargar Escena">
+                        <If DisplayName="Cargar Escenario null">
+                          <If.Condition>
+                            <InArgument x:TypeArguments="x:Boolean">
+                              <mca:CSharpValue x:TypeArguments="x:Boolean">Escenario[Iteracion].Equals(0)</mca:CSharpValue>
+                            </InArgument>
+                          </If.Condition>
+                          <If.Then>
+                            <WriteLine DisplayName="WriteLine">
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"L{ \"id\":\"null\" }"</mca:CSharpValue>
+                              </InArgument>
+                            </WriteLine>
+                          </If.Then>
+                          <If.Else>
+                            <WriteLine DisplayName="WriteLine">
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"L{ \"id\":\""+Escenario[Iteracion]+"\" }"</mca:CSharpValue>
+                              </InArgument>
+                            </WriteLine>
+                          </If.Else>
+                        </If>
+                        <Delay>
+                          <InArgument x:TypeArguments="x:TimeSpan">
+                            <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(1)</mca:CSharpValue>
+                          </InArgument>
+                        </Delay>
+                        <WriteLine DisplayName="WriteLine">
+                          <InArgument x:TypeArguments="x:String">
+                            <mca:CSharpValue x:TypeArguments="x:String">Agregar180</mca:CSharpValue>
+                          </InArgument>
+                        </WriteLine>
+                      </Sequence>
+                      <Sequence DisplayName="Ids Par de Banderas">
+                        <Assign>
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">
+                              <mca:CSharpReference x:TypeArguments="x:Int32">idIzquierda</mca:CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">
+                              <mca:CSharpValue x:TypeArguments="x:Int32">(new Random()).Next(0,BanderasCircunferencia.Count-1)</mca:CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign>
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">
+                              <mca:CSharpReference x:TypeArguments="x:Int32">idDerecha</mca:CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">
+                              <mca:CSharpValue x:TypeArguments="x:Int32">(idIzquierda+(Angulo[Iteracion]/Separacion))%BanderasCircunferencia.Count</mca:CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Sequence DisplayName="Reporte Bandera">
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Iteracion Nro">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"NroIteracion;"+Iteracion</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Angulo">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"Angulo;"+Angulo[Iteracion]</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Cual Seleccionar">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"A Seleccionar;"+Lateral[Iteracion]</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Protocolo">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"Protocolo;"+Protocolo[Iteracion]</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Escenario">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"Escenario;"+Escenario[Iteracion]</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="AparecerDeAUna">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"AparecerDeAUna;" + AparecePar[Iteracion]</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Izquierda Id">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"IdIzquierda;"+idIzquierda</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Izquierda PosX">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"IzquierdaX;" + BanderasCircunferencia.ElementAt(idIzquierda).X</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Izquierda PosY">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"IzquierdaY;" + BanderasCircunferencia.ElementAt(idIzquierda).Y</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Derecha Id">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"IdDerecha;"+idDerecha</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Derecha PosX">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"DerechaX;" + BanderasCircunferencia.ElementAt(idDerecha).X</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Derecha PosY">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">"DerechaY;" + BanderasCircunferencia.ElementAt(idDerecha).Y</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                        </Sequence>
+                        <If>
+                          <If.Condition>
+                            <InArgument x:TypeArguments="x:Boolean">
+                              <mca:CSharpValue x:TypeArguments="x:Boolean">Lateral[Iteracion].Equals("I")</mca:CSharpValue>
+                            </InArgument>
+                          </If.Condition>
+                          <If.Then>
+                            <Sequence DisplayName="Bandera Correcta">
+                              <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Correcta Id">
+                                <AddToCollection.Item>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <mca:CSharpValue x:TypeArguments="x:String">"IdCorrecta;"+idIzquierda</mca:CSharpValue>
+                                  </InArgument>
+                                </AddToCollection.Item>
+                                <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                  <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                </InArgument>
+                              </AddToCollection>
+                              <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Correcta PosX">
+                                <AddToCollection.Item>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <mca:CSharpValue x:TypeArguments="x:String">"CorrectaX;" + BanderasCircunferencia.ElementAt(idIzquierda).X</mca:CSharpValue>
+                                  </InArgument>
+                                </AddToCollection.Item>
+                                <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                  <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                </InArgument>
+                              </AddToCollection>
+                              <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Correcta PosY">
+                                <AddToCollection.Item>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <mca:CSharpValue x:TypeArguments="x:String">"CorrectaY;" + BanderasCircunferencia.ElementAt(idIzquierda).Y</mca:CSharpValue>
+                                  </InArgument>
+                                </AddToCollection.Item>
+                                <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                  <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                </InArgument>
+                              </AddToCollection>
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <If>
+                              <If.Condition>
+                                <InArgument x:TypeArguments="x:Boolean">
+                                  <mca:CSharpValue x:TypeArguments="x:Boolean">Lateral[Iteracion].Equals("D")</mca:CSharpValue>
+                                </InArgument>
+                              </If.Condition>
+                              <If.Then>
+                                <Sequence DisplayName="Bandera Correcta">
+                                  <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Correcta Id">
+                                    <AddToCollection.Item>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String">"IdCorrecta;"+idDerecha</mca:CSharpValue>
+                                      </InArgument>
+                                    </AddToCollection.Item>
+                                    <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                      <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                    </InArgument>
+                                  </AddToCollection>
+                                  <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Correcta PosX">
+                                    <AddToCollection.Item>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String">"CorrectaX;" + BanderasCircunferencia.ElementAt(idDerecha).X</mca:CSharpValue>
+                                      </InArgument>
+                                    </AddToCollection.Item>
+                                    <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                      <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                    </InArgument>
+                                  </AddToCollection>
+                                  <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Correcta PosY">
+                                    <AddToCollection.Item>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String">"CorrectaY;" + BanderasCircunferencia.ElementAt(idDerecha).Y</mca:CSharpValue>
+                                      </InArgument>
+                                    </AddToCollection.Item>
+                                    <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                      <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                    </InArgument>
+                                  </AddToCollection>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Bandera Correcta">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:Int32" Name="idMedio" />
+                                  </Sequence.Variables>
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpReference x:TypeArguments="x:Int32">idMedio</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpValue x:TypeArguments="x:Int32">(idIzquierda + Angulo[Iteracion]/2)%BanderasCircunferencia.Count</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Correcta Id">
+                                    <AddToCollection.Item>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String">"IdCorrecta;" + idMedio</mca:CSharpValue>
+                                      </InArgument>
+                                    </AddToCollection.Item>
+                                    <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                      <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                    </InArgument>
+                                  </AddToCollection>
+                                  <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Correcta PosX">
+                                    <AddToCollection.Item>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String">"CorrectaX;" + BanderasCircunferencia.ElementAt(idMedio).X</mca:CSharpValue>
+                                      </InArgument>
+                                    </AddToCollection.Item>
+                                    <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                      <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                    </InArgument>
+                                  </AddToCollection>
+                                  <AddToCollection x:TypeArguments="x:String" DisplayName="Bandera Correcta PosY">
+                                    <AddToCollection.Item>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String">"CorrectaY;" + BanderasCircunferencia.ElementAt(idMedio).Y</mca:CSharpValue>
+                                      </InArgument>
+                                    </AddToCollection.Item>
+                                    <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                      <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                    </InArgument>
+                                  </AddToCollection>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </If.Else>
+                        </If>
+                      </Sequence>
+                    </Sequence>
+                  </State.Entry>
+                  <State.Transitions>
+                    <Transition DisplayName="Ir a Capturar">
+                      <Transition.Trigger>
+                        <Sequence DisplayName="Recibir Coordenadas">
+                          <f:ReadString BookmarkName="RtaCave">
+                            <f:ReadString.Result>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                              </OutArgument>
+                            </f:ReadString.Result>
+                          </f:ReadString>
+                          <If DisplayName="Es un movimiento de joystick o apreto un boton">
+                            <If.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Split(';').Length&gt;1</mca:CSharpValue>
+                              </InArgument>
+                            </If.Condition>
+                            <If.Then>
+                              <Assign>
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="sd:PointF">
+                                    <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="sd:PointF">
+                                    <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                  </InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </If.Then>
+                          </If>
+                        </Sequence>
+                      </Transition.Trigger>
+                      <Transition.To>
+                        <State x:Name="__ReferenceID10" DisplayName="Recolectando">
+                          <State.Exit>
+                            <WriteLine Text="Recolectar" />
+                          </State.Exit>
+                          <State.Transitions>
+                            <Transition DisplayName="Recolecto bandera">
+                              <Transition.Trigger>
+                                <Sequence x:Name="__ReferenceID12" DisplayName="Recibir Coordenadas">
+                                  <f:ReadString BookmarkName="RtaCave">
+                                    <f:ReadString.Result>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                      </OutArgument>
+                                    </f:ReadString.Result>
+                                  </f:ReadString>
+                                  <If DisplayName="Es un movimiento de joystick o apreto un boton">
+                                    <If.Condition>
+                                      <InArgument x:TypeArguments="x:Boolean">
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Split(';').Length&gt;1</mca:CSharpValue>
+                                      </InArgument>
+                                    </If.Condition>
+                                    <If.Then>
+                                      <Assign>
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="sd:PointF">
+                                            <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                          </OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="sd:PointF">
+                                            <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                          </InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </If.Then>
+                                  </If>
+                                </Sequence>
+                              </Transition.Trigger>
+                              <Transition.To>
+                                <State x:Name="__ReferenceID11" DisplayName="Volviendo">
+                                  <State.Entry>
+                                    <Sequence>
+                                      <If>
+                                        <If.Condition>
+                                          <InArgument x:TypeArguments="x:Boolean">
+                                            <mca:CSharpValue x:TypeArguments="x:Boolean">ParBanderasVisible[0].Equals(1)</mca:CSharpValue>
+                                          </InArgument>
+                                        </If.Condition>
+                                        <If.Then>
+                                          <WriteLine Text="true" />
+                                        </If.Then>
+                                      </If>
+                                    </Sequence>
+                                  </State.Entry>
+                                  <State.Transitions>
+                                    <Transition DisplayName="Centro">
+                                      <Transition.Trigger>
+                                        <Sequence x:Name="__ReferenceID9" DisplayName="Recibir Coordenadas">
+                                          <f:ReadString BookmarkName="RtaCave">
+                                            <f:ReadString.Result>
+                                              <OutArgument x:TypeArguments="x:String">
+                                                <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                              </OutArgument>
+                                            </f:ReadString.Result>
+                                          </f:ReadString>
+                                          <If DisplayName="Es un movimiento de joystick o apreto un boton">
+                                            <If.Condition>
+                                              <InArgument x:TypeArguments="x:Boolean">
+                                                <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Split(';').Length&gt;1</mca:CSharpValue>
+                                              </InArgument>
+                                            </If.Condition>
+                                            <If.Then>
+                                              <Assign>
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="sd:PointF">
+                                                    <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                                  </OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="sd:PointF">
+                                                    <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                                  </InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </If.Then>
+                                          </If>
+                                        </Sequence>
+                                      </Transition.Trigger>
+                                      <Transition.To>
+                                        <State x:Name="__ReferenceID14" DisplayName="Evaluando">
+                                          <State.Transitions>
+                                            <Transition DisplayName="Prtocolo 1">
+                                              <Transition.Trigger>
+                                                <Sequence x:Name="__ReferenceID0" DisplayName="Recibir Coordenadas">
+                                                  <f:ReadString BookmarkName="RtaCave">
+                                                    <f:ReadString.Result>
+                                                      <OutArgument x:TypeArguments="x:String">
+                                                        <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                                      </OutArgument>
+                                                    </f:ReadString.Result>
+                                                  </f:ReadString>
+                                                  <If DisplayName="Es un movimiento de joystick o apreto un boton">
+                                                    <If.Condition>
+                                                      <InArgument x:TypeArguments="x:Boolean">
+                                                        <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Split(';').Length&gt;1</mca:CSharpValue>
+                                                      </InArgument>
+                                                    </If.Condition>
+                                                    <If.Then>
+                                                      <Assign>
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="sd:PointF">
+                                                            <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                                          </OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="sd:PointF">
+                                                            <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                                          </InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </If.Then>
+                                                  </If>
+                                                </Sequence>
+                                              </Transition.Trigger>
+                                              <Transition.Condition>
+                                                <mca:CSharpValue x:TypeArguments="x:Boolean">Protocolo[Iteracion].Equals(1)</mca:CSharpValue>
+                                              </Transition.Condition>
+                                              <Transition.To>
+                                                <State x:Name="__ReferenceID15" DisplayName="Protocolo 1">
+                                                  <State.Transitions>
+                                                    <Transition DisplayName="T1">
+                                                      <Transition.To>
+                                                        <State x:Name="__ReferenceID4" DisplayName="Fin" IsFinal="True">
+                                                          <State.Entry>
+                                                            <Sequence>
+                                                              <WriteLine>
+                                                                <InArgument x:TypeArguments="x:String">
+                                                                  <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Fin del experimento\" }"</mca:CSharpValue>
+                                                                </InArgument>
+                                                              </WriteLine>
+                                                              <Delay>
+                                                                <InArgument x:TypeArguments="x:TimeSpan">
+                                                                  <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(2)</mca:CSharpValue>
+                                                                </InArgument>
+                                                              </Delay>
+                                                              <WriteLine Text="hide_question" />
+                                                            </Sequence>
+                                                          </State.Entry>
+                                                        </State>
+                                                      </Transition.To>
+                                                    </Transition>
+                                                  </State.Transitions>
+                                                </State>
+                                              </Transition.To>
+                                            </Transition>
+                                            <Transition Trigger="{x:Reference __ReferenceID0}" DisplayName="Protocolo 2">
+                                              <Transition.To>
+                                                <State x:Name="__ReferenceID1" DisplayName="Seleccionando Bandera">
+                                                  <State.Entry>
+                                                    <Sequence DisplayName="Cambiar color Bandera de Cursor">
+                                                      <WriteLine>
+                                                        <InArgument x:TypeArguments="x:String">
+                                                          <mca:CSharpValue x:TypeArguments="x:String">"C{ \"id\":\"" + (int)(Cursor) + "\", \"color\":\"azul\" }"</mca:CSharpValue>
+                                                        </InArgument>
+                                                      </WriteLine>
+                                                    </Sequence>
+                                                  </State.Entry>
+                                                  <State.Transitions>
+                                                    <Transition DisplayName="Seguir Seleccionando">
+                                                      <Transition.Trigger>
+                                                        <Sequence x:Name="__ReferenceID2" DisplayName="Recibir Coordenadas">
+                                                          <f:ReadString BookmarkName="RtaCave">
+                                                            <f:ReadString.Result>
+                                                              <OutArgument x:TypeArguments="x:String">
+                                                                <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                                              </OutArgument>
+                                                            </f:ReadString.Result>
+                                                          </f:ReadString>
+                                                          <If DisplayName="Es un movimiento de joystick o apreto un boton">
+                                                            <If.Condition>
+                                                              <InArgument x:TypeArguments="x:Boolean">
+                                                                <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Split(';').Length&gt;1</mca:CSharpValue>
+                                                              </InArgument>
+                                                            </If.Condition>
+                                                            <If.Then>
+                                                              <Assign>
+                                                                <Assign.To>
+                                                                  <OutArgument x:TypeArguments="sd:PointF">
+                                                                    <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                                                  </OutArgument>
+                                                                </Assign.To>
+                                                                <Assign.Value>
+                                                                  <InArgument x:TypeArguments="sd:PointF">
+                                                                    <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </Assign.Value>
+                                                              </Assign>
+                                                            </If.Then>
+                                                          </If>
+                                                        </Sequence>
+                                                      </Transition.Trigger>
+                                                      <Transition.To>
+                                                        <x:Reference>__ReferenceID1</x:Reference>
+                                                      </Transition.To>
+                                                      <Transition.Action>
+                                                        <Sequence DisplayName="Mover Cursor">
+                                                          <WriteLine>
+                                                            <InArgument x:TypeArguments="x:String">
+                                                              <mca:CSharpValue x:TypeArguments="x:String">"C{ \"id\":\"" + (int)(Cursor) + "\", \"color\":\"" + Color[Iteracion] + "\" }"</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </WriteLine>
+                                                          <If>
+                                                            <If.Condition>
+                                                              <InArgument x:TypeArguments="x:Boolean">
+                                                                <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("1")</mca:CSharpValue>
+                                                              </InArgument>
+                                                            </If.Condition>
+                                                            <If.Then>
+                                                              <Sequence DisplayName="Mover Cursor">
+                                                                <Assign>
+                                                                  <Assign.To>
+                                                                    <OutArgument x:TypeArguments="x:Int32">
+                                                                      <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                                    </OutArgument>
+                                                                  </Assign.To>
+                                                                  <Assign.Value>
+                                                                    <InArgument x:TypeArguments="x:Int32">
+                                                                      <mca:CSharpValue x:TypeArguments="x:Int32">(Cursor - 1) % BanderasCircunferencia.Count</mca:CSharpValue>
+                                                                    </InArgument>
+                                                                  </Assign.Value>
+                                                                </Assign>
+                                                                <If>
+                                                                  <If.Condition>
+                                                                    <InArgument x:TypeArguments="x:Boolean">
+                                                                      <mca:CSharpValue x:TypeArguments="x:Boolean">Cursor&lt;0</mca:CSharpValue>
+                                                                    </InArgument>
+                                                                  </If.Condition>
+                                                                  <If.Then>
+                                                                    <Assign>
+                                                                      <Assign.To>
+                                                                        <OutArgument x:TypeArguments="x:Int32">
+                                                                          <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                                        </OutArgument>
+                                                                      </Assign.To>
+                                                                      <Assign.Value>
+                                                                        <InArgument x:TypeArguments="x:Int32">
+                                                                          <mca:CSharpValue x:TypeArguments="x:Int32">BanderasCircunferencia.Count-1</mca:CSharpValue>
+                                                                        </InArgument>
+                                                                      </Assign.Value>
+                                                                    </Assign>
+                                                                  </If.Then>
+                                                                </If>
+                                                              </Sequence>
+                                                            </If.Then>
+                                                            <If.Else>
+                                                              <Assign>
+                                                                <Assign.To>
+                                                                  <OutArgument x:TypeArguments="x:Int32">
+                                                                    <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                                  </OutArgument>
+                                                                </Assign.To>
+                                                                <Assign.Value>
+                                                                  <InArgument x:TypeArguments="x:Int32">
+                                                                    <mca:CSharpValue x:TypeArguments="x:Int32">(Cursor + 1) % BanderasCircunferencia.Count</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </Assign.Value>
+                                                              </Assign>
+                                                            </If.Else>
+                                                          </If>
+                                                        </Sequence>
+                                                      </Transition.Action>
+                                                      <Transition.Condition>
+                                                        <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("1") || RtaCave.Equals("3")</mca:CSharpValue>
+                                                      </Transition.Condition>
+                                                    </Transition>
+                                                    <Transition Trigger="{x:Reference __ReferenceID2}" DisplayName="Eligio bandera">
+                                                      <Transition.To>
+                                                        <State x:Name="__ReferenceID7" DisplayName="Termino Test de Memoria">
+                                                          <State.Exit>
+                                                            <Sequence>
+                                                              <Assign DisplayName="Aumentar iteracion">
+                                                                <Assign.To>
+                                                                  <OutArgument x:TypeArguments="x:Int32">
+                                                                    <mca:CSharpReference x:TypeArguments="x:Int32">Iteracion</mca:CSharpReference>
+                                                                  </OutArgument>
+                                                                </Assign.To>
+                                                                <Assign.Value>
+                                                                  <InArgument x:TypeArguments="x:Int32">
+                                                                    <mca:CSharpValue x:TypeArguments="x:Int32">Iteracion+1</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </Assign.Value>
+                                                              </Assign>
+                                                              <Sequence DisplayName="Reporte">
+                                                                <AddToCollection x:TypeArguments="x:String" DisplayName="Seleccion de Bandera">
+                                                                  <AddToCollection.Item>
+                                                                    <InArgument x:TypeArguments="x:String">
+                                                                      <mca:CSharpValue x:TypeArguments="x:String" xml:space="preserve">"Hora Fin Seleccion;" + TimeZone.CurrentTimeZone.ToString() + "/n"+
+                "Bandera Seleccionada [id];"+Cursor+"/n"+
+                    "Bandera Seleccionada [X];"+BanderasCircunferencia.ElementAt(Cursor).X+"\n"+
+                    "Bandera Seleccionada [Y];"+BanderasCircunferencia.ElementAt(Cursor).Y</mca:CSharpValue>
+                                                                    </InArgument>
+                                                                  </AddToCollection.Item>
+                                                                  <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                                    <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </AddToCollection>
+                                                              </Sequence>
+                                                              <WriteLine Text="hide_question" />
+                                                            </Sequence>
+                                                          </State.Exit>
+                                                          <State.Transitions>
+                                                            <Transition DisplayName="Seguir Iterando" To="{x:Reference __ReferenceID3}">
+                                                              <Transition.Condition>
+                                                                <mca:CSharpValue x:TypeArguments="x:Boolean">Iteracion&lt;Angulo.Length</mca:CSharpValue>
+                                                              </Transition.Condition>
+                                                            </Transition>
+                                                            <Transition DisplayName="No seguir iternado" To="{x:Reference __ReferenceID4}">
+                                                              <Transition.Condition>
+                                                                <mca:CSharpValue x:TypeArguments="x:Boolean">Iteracion.Equals(Angulo.Length)</mca:CSharpValue>
+                                                              </Transition.Condition>
+                                                            </Transition>
+                                                          </State.Transitions>
+                                                        </State>
+                                                      </Transition.To>
+                                                      <Transition.Action>
+                                                        <Sequence DisplayName="Termino de elegir">
+                                                          <WriteLine>
+                                                            <InArgument x:TypeArguments="x:String">
+                                                              <mca:CSharpValue x:TypeArguments="x:String">"C{ \"id\":\"" + (int)(Cursor) + "\", \"color\":\"" + Color[Iteracion] + "\" }"</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </WriteLine>
+                                                          <WriteLine DisplayName="Ocultar Banderas">
+                                                            <InArgument x:TypeArguments="x:String">
+                                                              <mca:CSharpValue x:TypeArguments="x:String">Mostrar180.Replace("true", "false")</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </WriteLine>
+                                                        </Sequence>
+                                                      </Transition.Action>
+                                                      <Transition.Condition>
+                                                        <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("2")&amp;&amp;(Iteracion&lt;(Angulo.Length-1))</mca:CSharpValue>
+                                                      </Transition.Condition>
+                                                    </Transition>
+                                                  </State.Transitions>
+                                                </State>
+                                              </Transition.To>
+                                              <Transition.Action>
+                                                <Sequence>
+                                                  <Assign>
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Int32">
+                                                        <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                      </OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <WriteLine DisplayName="WriteLine">
+                                                    <InArgument x:TypeArguments="x:String">
+                                                      <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Escucha la consigna\" }"</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </WriteLine>
+                                                  <Delay>
+                                                    <InArgument x:TypeArguments="x:TimeSpan">
+                                                      <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(4)</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </Delay>
+                                                  <WriteLine Text="hide_question" />
+                                                  <WriteLine DisplayName="WriteLine">
+                                                    <InArgument x:TypeArguments="x:String">
+                                                      <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\" \" }"</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </WriteLine>
+                                                  <WriteLine DisplayName="Mostrar la circunferencia con todas las banderas">
+                                                    <InArgument x:TypeArguments="x:String">
+                                                      <mca:CSharpValue x:TypeArguments="x:String">Mostrar180</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </WriteLine>
+                                                </Sequence>
+                                              </Transition.Action>
+                                              <Transition.Condition>
+                                                <mca:CSharpValue x:TypeArguments="x:Boolean">Protocolo[Iteracion].Equals(2)</mca:CSharpValue>
+                                              </Transition.Condition>
+                                            </Transition>
+                                            <Transition Trigger="{x:Reference __ReferenceID0}" DisplayName="Protocolo 3">
+                                              <Transition.To>
+                                                <State x:Name="__ReferenceID5" DisplayName="Colocando Bandera">
+                                                  <State.Exit>
+                                                    <Assign>
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Int32">
+                                                          <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                        </OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Int32">
+                                                          <mca:CSharpValue x:TypeArguments="x:Int32">BanderasCircunferencia.Count + Iteracion</mca:CSharpValue>
+                                                        </InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                  </State.Exit>
+                                                  <State.Transitions>
+                                                    <Transition DisplayName="Confirmar Posicion">
+                                                      <Transition.Trigger>
+                                                        <Sequence x:Name="__ReferenceID8" DisplayName="Recibir Coordenadas">
+                                                          <f:ReadString BookmarkName="RtaCave">
+                                                            <f:ReadString.Result>
+                                                              <OutArgument x:TypeArguments="x:String">
+                                                                <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                                              </OutArgument>
+                                                            </f:ReadString.Result>
+                                                          </f:ReadString>
+                                                          <If DisplayName="Es un movimiento de joystick o apreto un boton">
+                                                            <If.Condition>
+                                                              <InArgument x:TypeArguments="x:Boolean">
+                                                                <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Split(';').Length&gt;1</mca:CSharpValue>
+                                                              </InArgument>
+                                                            </If.Condition>
+                                                            <If.Then>
+                                                              <Assign>
+                                                                <Assign.To>
+                                                                  <OutArgument x:TypeArguments="sd:PointF">
+                                                                    <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                                                  </OutArgument>
+                                                                </Assign.To>
+                                                                <Assign.Value>
+                                                                  <InArgument x:TypeArguments="sd:PointF">
+                                                                    <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </Assign.Value>
+                                                              </Assign>
+                                                            </If.Then>
+                                                          </If>
+                                                        </Sequence>
+                                                      </Transition.Trigger>
+                                                      <Transition.To>
+                                                        <State x:Name="__ReferenceID16" DisplayName="Confirmando Ubicacion">
+                                                          <State.Transitions>
+                                                            <Transition DisplayName="Borrar Bandera">
+                                                              <Transition.Trigger>
+                                                                <Sequence x:Name="__ReferenceID6" DisplayName="Recibir Coordenadas">
+                                                                  <f:ReadString BookmarkName="RtaCave">
+                                                                    <f:ReadString.Result>
+                                                                      <OutArgument x:TypeArguments="x:String">
+                                                                        <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                                                      </OutArgument>
+                                                                    </f:ReadString.Result>
+                                                                  </f:ReadString>
+                                                                  <If DisplayName="Es un movimiento de joystick o apreto un boton">
+                                                                    <If.Condition>
+                                                                      <InArgument x:TypeArguments="x:Boolean">
+                                                                        <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Split(';').Length&gt;1</mca:CSharpValue>
+                                                                      </InArgument>
+                                                                    </If.Condition>
+                                                                    <If.Then>
+                                                                      <Assign>
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="sd:PointF">
+                                                                            <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                                                          </OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="sd:PointF">
+                                                                            <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                                                          </InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                    </If.Then>
+                                                                  </If>
+                                                                </Sequence>
+                                                              </Transition.Trigger>
+                                                              <Transition.To>
+                                                                <x:Reference>__ReferenceID5</x:Reference>
+                                                              </Transition.To>
+                                                              <Transition.Action>
+                                                                <WriteLine>
+                                                                  <InArgument x:TypeArguments="x:String">
+                                                                    <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(Cursor-1) + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </WriteLine>
+                                                              </Transition.Action>
+                                                              <Transition.Condition>
+                                                                <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("2")</mca:CSharpValue>
+                                                              </Transition.Condition>
+                                                            </Transition>
+                                                            <Transition Trigger="{x:Reference __ReferenceID6}" DisplayName="Eligio bandera" To="{x:Reference __ReferenceID7}">
+                                                              <Transition.Action>
+                                                                <WriteLine DisplayName="Esconder Bandera">
+                                                                  <InArgument x:TypeArguments="x:String">
+                                                                    <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(Cursor-1) + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </WriteLine>
+                                                              </Transition.Action>
+                                                              <Transition.Condition>
+                                                                <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("1")</mca:CSharpValue>
+                                                              </Transition.Condition>
+                                                            </Transition>
+                                                          </State.Transitions>
+                                                        </State>
+                                                      </Transition.To>
+                                                      <Transition.Action>
+                                                        <Sequence DisplayName="Agregar Nueva">
+                                                          <WriteLine>
+                                                            <InArgument x:TypeArguments="x:String">
+                                                              <mca:CSharpValue x:TypeArguments="x:String">"A{ \"id\":\"" + Cursor + "\", \"color\":\"" + Color[Iteracion] + "\", \"x\":\"" + Coordenadas.X.ToString(System.Globalization.CultureInfo.InvariantCulture).Replace(",", ".") + "\", \"y\":\"" + Coordenadas.Y.ToString(System.Globalization.CultureInfo.InvariantCulture).Replace(",", ".") + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </WriteLine>
+                                                          <Assign>
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:Int32">
+                                                                <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                              </OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:Int32">
+                                                                <mca:CSharpValue x:TypeArguments="x:Int32">Cursor+1</mca:CSharpValue>
+                                                              </InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
+                                                          <WriteLine Text="hide_question" />
+                                                          <Delay>
+                                                            <InArgument x:TypeArguments="x:TimeSpan">
+                                                              <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(2)</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </Delay>
+                                                          <WriteLine DisplayName="WriteLine">
+                                                            <InArgument x:TypeArguments="x:String">
+                                                              <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Confirma la posicion (Y)\" }"</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </WriteLine>
+                                                          <Delay>
+                                                            <InArgument x:TypeArguments="x:TimeSpan">
+                                                              <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(2)</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </Delay>
+                                                          <WriteLine Text="hide_question" />
+                                                          <WriteLine DisplayName="WriteLine">
+                                                            <InArgument x:TypeArguments="x:String">
+                                                              <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\" \" }"</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </WriteLine>
+                                                        </Sequence>
+                                                      </Transition.Action>
+                                                      <Transition.Condition>
+                                                        <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("2")</mca:CSharpValue>
+                                                      </Transition.Condition>
+                                                    </Transition>
+                                                    <Transition Trigger="{x:Reference __ReferenceID8}" DisplayName="" To="{x:Reference __ReferenceID5}">
+                                                      <Transition.Condition>
+                                                        <mca:CSharpValue x:TypeArguments="x:Boolean">!RtaCave.Equals("2")</mca:CSharpValue>
+                                                      </Transition.Condition>
+                                                    </Transition>
+                                                  </State.Transitions>
+                                                </State>
+                                              </Transition.To>
+                                              <Transition.Action>
+                                                <Sequence>
+                                                  <WriteLine DisplayName="WriteLine">
+                                                    <InArgument x:TypeArguments="x:String">
+                                                      <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Coloca la bandera\" }"</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </WriteLine>
+                                                  <Delay>
+                                                    <InArgument x:TypeArguments="x:TimeSpan">
+                                                      <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(4)</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </Delay>
+                                                  <WriteLine Text="hide_question" />
+                                                  <WriteLine DisplayName="WriteLine">
+                                                    <InArgument x:TypeArguments="x:String">
+                                                      <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\" \" }"</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </WriteLine>
+                                                </Sequence>
+                                              </Transition.Action>
+                                              <Transition.Condition>
+                                                <mca:CSharpValue x:TypeArguments="x:Boolean">Protocolo[Iteracion].Equals(3)</mca:CSharpValue>
+                                              </Transition.Condition>
+                                            </Transition>
+                                          </State.Transitions>
+                                        </State>
+                                      </Transition.To>
+                                      <Transition.Action>
+                                        <Sequence DisplayName="Termino de recolectar el par">
+                                          <Assign>
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Int32">
+                                                <mca:CSharpReference x:TypeArguments="x:Int32">IRecoleccion</mca:CSharpReference>
+                                              </OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <Sequence DisplayName="Reporte">
+                                            <AddToCollection x:TypeArguments="x:String" DisplayName="Inicio test de memoria">
+                                              <AddToCollection.Item>
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <mca:CSharpValue x:TypeArguments="x:String">"Inicio test memoria;" + TimeZone.CurrentTimeZone.ToString()</mca:CSharpValue>
+                                                </InArgument>
+                                              </AddToCollection.Item>
+                                              <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                              </InArgument>
+                                            </AddToCollection>
+                                          </Sequence>
+                                        </Sequence>
+                                      </Transition.Action>
+                                      <Transition.Condition>
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">((Math.Sqrt(Math.Pow(Coordenadas.X - Cruz.X, 2) + Math.Pow(Coordenadas.Y - Cruz.Y, 2))) &lt; Cercania) &amp;&amp; (IRecoleccion.Equals(2)) &amp;&amp; (Evaluar.Equals(1))</mca:CSharpValue>
+                                      </Transition.Condition>
+                                    </Transition>
+                                    <Transition Trigger="{x:Reference __ReferenceID9}" DisplayName="Recolectar Una Mas" To="{x:Reference __ReferenceID10}">
+                                      <Transition.Action>
+                                        <Sequence>
+                                          <Sequence DisplayName="Reporte">
+                                            <AddToCollection x:TypeArguments="x:String" DisplayName="Centro">
+                                              <AddToCollection.Item>
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <mca:CSharpValue x:TypeArguments="x:String">"Hora Centro;" + TimeZone.CurrentTimeZone.ToString()</mca:CSharpValue>
+                                                </InArgument>
+                                              </AddToCollection.Item>
+                                              <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                              </InArgument>
+                                            </AddToCollection>
+                                          </Sequence>
+                                          <If DisplayName="Cuando hay que mostrar de a una bandera">
+                                            <If.Condition>
+                                              <InArgument x:TypeArguments="x:Boolean">
+                                                <mca:CSharpValue x:TypeArguments="x:Boolean">AparecePar[Iteracion].Equals(0)</mca:CSharpValue>
+                                              </InArgument>
+                                            </If.Condition>
+                                            <If.Then>
+                                              <Sequence DisplayName="Mostrar bandera derecha">
+                                                <WriteLine DisplayName="WriteLine">
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + idDerecha + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                                  </InArgument>
+                                                </WriteLine>
+                                                <Assign DisplayName="Ponerla Visible">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Int32">
+                                                      <mca:CSharpReference x:TypeArguments="x:Int32">ParBanderasVisible[1]</mca:CSharpReference>
+                                                    </OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </Sequence>
+                                            </If.Then>
+                                          </If>
+                                        </Sequence>
+                                      </Transition.Action>
+                                      <Transition.Condition>
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">((Math.Sqrt(Math.Pow(Coordenadas.X - Cruz.X, 2) + Math.Pow(Coordenadas.Y - Cruz.Y, 2))) &lt; Cercania) &amp;&amp; (IRecoleccion.CompareTo(2)&lt;0)</mca:CSharpValue>
+                                      </Transition.Condition>
+                                    </Transition>
+                                    <Transition Trigger="{x:Reference __ReferenceID9}" DisplayName="No paso por el centro" To="{x:Reference __ReferenceID11}">
+                                      <Transition.Condition>
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">!(Math.Sqrt(Math.Pow(Coordenadas.X - Cruz.X, 2) + Math.Pow(Coordenadas.Y - Cruz.Y, 2))) &lt; Cercania)</mca:CSharpValue>
+                                      </Transition.Condition>
+                                    </Transition>
+                                  </State.Transitions>
+                                </State>
+                              </Transition.To>
+                              <Transition.Action>
+                                <Sequence DisplayName="Recolectar">
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpReference x:TypeArguments="x:Int32">IRecoleccion</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpValue x:TypeArguments="x:Int32">IRecoleccion+1</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <If>
+                                    <If.Condition>
+                                      <InArgument x:TypeArguments="x:Boolean">
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">(ParBanderasVisible[0].Equals(1) &amp;&amp; ((Math.Sqrt(Math.Pow(Coordenadas.X - BanderasCircunferencia.ElementAt(idIzquierda).X, 2) + Math.Pow(Coordenadas.Y - BanderasCircunferencia.ElementAt(idIzquierda).Y, 2))) &lt; Cercania))</mca:CSharpValue>
+                                      </InArgument>
+                                    </If.Condition>
+                                    <If.Then>
+                                      <Sequence>
+                                        <Assign DisplayName="Oculatar Bandera Izquierda">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Int32">
+                                              <mca:CSharpReference x:TypeArguments="x:Int32">ParBanderasVisible[0]</mca:CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <WriteLine DisplayName="WriteLine">
+                                          <InArgument x:TypeArguments="x:String">
+                                            <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + idIzquierda + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                          </InArgument>
+                                        </WriteLine>
+                                        <Sequence DisplayName="Reporte">
+                                          <AddToCollection x:TypeArguments="x:String" DisplayName="Captura de Bandera">
+                                            <AddToCollection.Item>
+                                              <InArgument x:TypeArguments="x:String">
+                                                <mca:CSharpValue x:TypeArguments="x:String" xml:space="preserve">"Captura Bandera;" + idIzquierda + "/n"
+                + "Hora;" + TimeZone.CurrentTimeZone.ToString()</mca:CSharpValue>
+                                              </InArgument>
+                                            </AddToCollection.Item>
+                                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                            </InArgument>
+                                          </AddToCollection>
+                                        </Sequence>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <If>
+                                        <If.Condition>
+                                          <InArgument x:TypeArguments="x:Boolean">
+                                            <mca:CSharpValue x:TypeArguments="x:Boolean">(ParBanderasVisible[1].Equals(1) &amp;&amp; (Math.Sqrt(Math.Pow(Coordenadas.X - BanderasCircunferencia.ElementAt(idDerecha).X, 2)+ Math.Pow(Coordenadas.Y - BanderasCircunferencia.ElementAt(idDerecha).Y, 2))) &lt; Cercania)</mca:CSharpValue>
+                                          </InArgument>
+                                        </If.Condition>
+                                        <If.Then>
+                                          <Sequence>
+                                            <Assign DisplayName="Oculatar Bandera Izquierda">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Int32">
+                                                  <mca:CSharpReference x:TypeArguments="x:Int32">ParBanderasVisible[1]</mca:CSharpReference>
+                                                </OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <WriteLine DisplayName="WriteLine">
+                                              <InArgument x:TypeArguments="x:String">
+                                                <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + idDerecha + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                              </InArgument>
+                                            </WriteLine>
+                                            <Sequence DisplayName="Reporte">
+                                              <AddToCollection x:TypeArguments="x:String" DisplayName="Captura de Bandera">
+                                                <AddToCollection.Item>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <mca:CSharpValue x:TypeArguments="x:String" xml:space="preserve">"Captura Bandera;" + idDerecha + "/n"
+                + "Hora;" + TimeZone.CurrentTimeZone.ToString()</mca:CSharpValue>
+                                                  </InArgument>
+                                                </AddToCollection.Item>
+                                                <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                  <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Reporte</mca:CSharpValue>
+                                                </InArgument>
+                                              </AddToCollection>
+                                            </Sequence>
+                                          </Sequence>
+                                        </If.Then>
+                                      </If>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </Transition.Action>
+                              <Transition.Condition>
+                                <mca:CSharpValue x:TypeArguments="x:Boolean">(ParBanderasVisible[0].Equals(1) &amp;&amp; ((Math.Sqrt(Math.Pow(Coordenadas.X - BanderasCircunferencia.ElementAt(idIzquierda).X, 2) - Math.Pow(Coordenadas.Y - BanderasCircunferencia.ElementAt(idIzquierda).Y, 2))) &lt; Cercania)) || (ParBanderasVisible[1].Equals(1) &amp;&amp; (Math.Sqrt(Math.Pow(Coordenadas.X - BanderasCircunferencia.ElementAt(idDerecha).X, 2) - Math.Pow(Coordenadas.Y - BanderasCircunferencia.ElementAt(idDerecha).Y, 2))) &lt; Cercania)</mca:CSharpValue>
+                              </Transition.Condition>
+                            </Transition>
+                            <Transition Trigger="{x:Reference __ReferenceID12}" DisplayName="No recolecto" To="{x:Reference __ReferenceID10}">
+                              <Transition.Condition>
+                                <mca:CSharpValue x:TypeArguments="x:Boolean">!((ParBanderasVisible[0].Equals(1) &amp;&amp; ((Math.Sqrt(Math.Pow(Coordenadas.X - BanderasCircunferencia.ElementAt(idIzquierda).X, 2) - Math.Pow(Coordenadas.Y - BanderasCircunferencia.ElementAt(idIzquierda).Y, 2))) &lt; Cercania)) || (ParBanderasVisible[1].Equals(1) &amp;&amp; (Math.Sqrt(Math.Pow(Coordenadas.X - BanderasCircunferencia.ElementAt(idDerecha).X, 2) - Math.Pow(Coordenadas.Y - BanderasCircunferencia.ElementAt(idDerecha).Y, 2))) &lt; Cercania))</mca:CSharpValue>
+                              </Transition.Condition>
+                            </Transition>
+                          </State.Transitions>
+                        </State>
+                      </Transition.To>
+                      <Transition.Action>
+                        <Sequence>
+                          <If>
+                            <If.Condition>
+                              <InArgument x:TypeArguments="x:Boolean">
+                                <mca:CSharpValue x:TypeArguments="x:Boolean">AparecePar[Iteracion].Equals(1)</mca:CSharpValue>
+                              </InArgument>
+                            </If.Condition>
+                            <If.Then>
+                              <Sequence>
+                                <WriteLine>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + idIzquierda + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                  </InArgument>
+                                </WriteLine>
+                                <WriteLine>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + idDerecha + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                  </InArgument>
+                                </WriteLine>
+                                <Sequence DisplayName="Visible Invisible">
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:Int32[]">
+                                        <mca:CSharpReference x:TypeArguments="s:Int32[]">ParBanderasVisible</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:Int32[]">
+                                        <mca:CSharpValue x:TypeArguments="s:Int32[]">new int [2]</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpReference x:TypeArguments="x:Int32">ParBanderasVisible[0]</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpReference x:TypeArguments="x:Int32">ParBanderasVisible[1]</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence>
+                                <WriteLine DisplayName="WriteLine">
+                                  <InArgument x:TypeArguments="x:String">
+                                    <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + idIzquierda + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                  </InArgument>
+                                </WriteLine>
+                                <Sequence DisplayName="Visible Invisible">
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:Int32[]">
+                                        <mca:CSharpReference x:TypeArguments="s:Int32[]">ParBanderasVisible</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:Int32[]">
+                                        <mca:CSharpValue x:TypeArguments="s:Int32[]">new int [2]</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpReference x:TypeArguments="x:Int32">ParBanderasVisible[0]</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Int32">
+                                        <mca:CSharpReference x:TypeArguments="x:Int32">ParBanderasVisible[1]</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </Sequence>
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </Transition.Action>
+                    </Transition>
+                  </State.Transitions>
+                </State>
+              </Transition.To>
+            </Transition>
+          </State.Transitions>
+        </State>
+      </StateMachine.InitialState>
+      <x:Reference>__ReferenceID13</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
+      <x:Reference>__ReferenceID14</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID15</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID16</x:Reference>
+      <StateMachine.Variables>
+        <Variable x:TypeArguments="x:Int32" Name="IRecoleccion" />
+        <Variable x:TypeArguments="x:Int32" Name="Iteracion" />
+        <Variable x:TypeArguments="x:Int32" Name="MaxIteracion" />
+        <Variable x:TypeArguments="x:String" Name="RtaCave" />
+        <Variable x:TypeArguments="sd:PointF" Name="Coordenadas" />
+        <Variable x:TypeArguments="s:Int32[]" Name="ParBanderasVisible" />
+        <Variable x:TypeArguments="x:Int32" Name="idIzquierda" />
+        <Variable x:TypeArguments="x:Int32" Name="idDerecha" />
+        <Variable x:TypeArguments="x:Int32" Name="Cercania" />
+        <Variable x:TypeArguments="sd:PointF" Name="Cruz" />
+        <Variable x:TypeArguments="x:Int32" Name="Cursor" />
+      </StateMachine.Variables>
+      <sads:DebugSymbol.Symbol>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</sads:DebugSymbol.Symbol>
+    </StateMachine>
+  </e:Ejercicio.Implementation>
+</e:Ejercicio>

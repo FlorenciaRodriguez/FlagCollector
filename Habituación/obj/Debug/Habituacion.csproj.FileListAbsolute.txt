@@ -1,0 +1,106 @@
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\bin\Debug\Habituación.dll
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\bin\Debug\Habituación.pdb
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\bin\Debug\FlagCollectorWorkflowActivities.dll
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\bin\Debug\FlagCollectorWorkflowActivities.pdb
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\Habituacion.csprojResolveAssemblyReference.cache
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.xaml
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.txt
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\_Habituación.g.cs
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.cs
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.cs
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\Habituación.dll
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\Habituación.pdb
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_CompiledExpressionRoot.cs
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\Activity1.g.cs
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\Activity1.g.xaml
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\HabituacionWF.g.cs
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\HabituacionWF.g.xaml
+C:\Users\Flor\Desktop\vs\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\_Habituación.g.cs
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\bin\Debug\Habituación.dll
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\bin\Debug\Habituación.pdb
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\bin\Debug\FlagCollectorWorkflowActivities.dll
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\bin\Debug\FlagCollectorWorkflowActivities.pdb
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\Habituacion.csprojResolveAssemblyReference.cache
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.xaml
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.txt
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\_Habituación.g.cs
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.cs
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.cs
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\Habituación.dll
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\Habituación.pdb
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_CompiledExpressionRoot.cs
+C:\Users\DellPladema\Desktop\neurociecia_ultima\WFFlagCollector\Habituación\obj\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\bin\Debug\Habituación.dll
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\bin\Debug\Habituación.pdb
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\bin\Debug\FlagCollectorWorkflowActivities.dll
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\bin\Debug\FlagCollectorWorkflowActivities.pdb
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\Habituacion.csprojResolveAssemblyReference.cache
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.xaml
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.txt
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\_Habituación.g.cs
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.cs
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.cs
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\Habituación.dll
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\Habituación.pdb
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_CompiledExpressionRoot.cs
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\Activity1.g.cs
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\Activity1.g.xaml
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\HabituacionWF.g.cs
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\HabituacionWF.g.xaml
+C:\Users\Flor\Documents\Visual Studio 2012\Projects\WFFlagCollector\Habituación\obj\Debug\InProcessTempFiles\_Habituación.g.cs
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\bin\Debug\Habituación.dll
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\bin\Debug\Habituación.pdb
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\bin\Debug\FlagCollectorWorkflowActivities.dll
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\bin\Debug\FlagCollectorWorkflowActivities.pdb
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituacion.csprojResolveAssemblyReference.cache
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.xaml
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.txt
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\_Habituación.g.cs
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.cs
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.cs
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación.dll
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación.pdb
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_CompiledExpressionRoot.cs
+C:\Users\DellPladema\Desktop\VFinal\WFFlagCollector\Habituación\obj\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\bin\Debug\Habituación.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\bin\Debug\Habituación.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituacion.csprojResolveAssemblyReference.cache
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.xaml
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\_Habituación.g.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\HabituacionWF.g.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\Habituación_Activity1_CompiledExpressionRoot.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\obj\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\bin\Debug\ProtocoloSimple.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\Habituación\bin\Debug\ProtocoloSimple.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\bin\Debug\Habituación.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\bin\Debug\Habituación.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\bin\Debug\ProtocoloSimple.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\bin\Debug\ProtocoloSimple.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\Habituacion.csprojResolveAssemblyReference.cache
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\HabituacionWF.g.xaml
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\_Habituación.g.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\HabituacionWF.g.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\Habituación_Activity1_BeforeInitializeComponentHelper.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\Habituacion.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\Habituación.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\Habituación.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\Habituación_Activity1_CompiledExpressionRoot.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\Habituación\obj\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml

@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<h:Activity1 xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:f="clr-namespace:FlagCollectorWorkflowActivities;assembly=ProtocoloSimple" xmlns:h="clr-namespace:Habituación;assembly=Habituación" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Drawing</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>ProtocoloSimple</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Habituación</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <h:Activity1.Implementation>
+    <StateMachine>
+      <StateMachine.InitialState>
+        <State x:Name="__ReferenceID4" DisplayName="Configurar Escenario">
+          <State.Entry>
+            <Sequence>
+              <Assign>
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">
+                    <mca:CSharpReference x:TypeArguments="x:Int32">DistanciaPermitida</mca:CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Sequence DisplayName="Crear Banderas">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:Single" Name="y" />
+                  <Variable x:TypeArguments="x:Single" Name="x" />
+                  <Variable x:TypeArguments="x:Int32" Name="i" />
+                  <Variable x:TypeArguments="x:Int32" Name="angulo" />
+                </Sequence.Variables>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="scg1:LinkedList(x:Int32)">
+                      <mca:CSharpReference x:TypeArguments="scg1:LinkedList(x:Int32)">IdBandera</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="scg1:LinkedList(x:Int32)">
+                      <mca:CSharpValue x:TypeArguments="scg1:LinkedList(x:Int32)">new LinkedList&lt;int&gt;()</mca:CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="scg1:LinkedList(sd:PointF)">
+                      <mca:CSharpReference x:TypeArguments="scg1:LinkedList(sd:PointF)">UbicacionBanderas</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="scg1:LinkedList(sd:PointF)">
+                      <mca:CSharpValue x:TypeArguments="scg1:LinkedList(sd:PointF)">new LinkedList&lt;PointF&gt;()</mca:CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32">i</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">
+                      <mca:CSharpReference x:TypeArguments="x:Int32">angulo</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign DisplayName="banderas">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String">VarBanderas</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">as[</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <While>
+                  <While.Condition>
+                    <mca:CSharpValue x:TypeArguments="x:Boolean">i&lt;TotalBanderas</mca:CSharpValue>
+                  </While.Condition>
+                  <Sequence>
+                    <Assign DisplayName="x1 - 0">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Single">
+                          <mca:CSharpReference x:TypeArguments="x:Single">x</mca:CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Single">
+                          <mca:CSharpValue x:TypeArguments="x:Single">Radio * (float)(Math.Cos((Math.PI * angulo / 180)))</mca:CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="y1 - 0">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Single">
+                          <mca:CSharpReference x:TypeArguments="x:Single">y</mca:CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Single">
+                          <mca:CSharpValue x:TypeArguments="x:Single">Radio * (float)(Math.Sin((Math.PI * angulo / 180)))</mca:CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <AddToCollection x:TypeArguments="sd:PointF" DisplayName="AddToCollection&lt;PointF&gt;">
+                      <AddToCollection.Item>
+                        <InArgument x:TypeArguments="sd:PointF">
+                          <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(x,y)</mca:CSharpValue>
+                        </InArgument>
+                      </AddToCollection.Item>
+                      <InArgument x:TypeArguments="scg:ICollection(sd:PointF)">
+                        <mca:CSharpValue x:TypeArguments="scg:ICollection(sd:PointF)">UbicacionBanderas</mca:CSharpValue>
+                      </InArgument>
+                    </AddToCollection>
+                    <AddToCollection x:TypeArguments="x:Int32">
+                      <AddToCollection.Item>
+                        <InArgument x:TypeArguments="x:Int32">
+                          <mca:CSharpValue x:TypeArguments="x:Int32">i</mca:CSharpValue>
+                        </InArgument>
+                      </AddToCollection.Item>
+                      <InArgument x:TypeArguments="scg:ICollection(x:Int32)">
+                        <mca:CSharpValue x:TypeArguments="scg:ICollection(x:Int32)">IdBandera</mca:CSharpValue>
+                      </InArgument>
+                    </AddToCollection>
+                    <Assign DisplayName="banderas">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mca:CSharpReference x:TypeArguments="x:String">VarBanderas</mca:CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">VarBanderas + " { \"id\":\"" + i.ToString() + "\", \"color\":\"" + Color + "\", \"x\":\"" + x.ToString().Replace(",", ".") + "\", \"y\":\"" + y.ToString().Replace(",", ".") + "\", \"visible\":\"true\" },"</mca:CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign>
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">
+                          <mca:CSharpReference x:TypeArguments="x:Int32">angulo</mca:CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">
+                          <mca:CSharpValue x:TypeArguments="x:Int32">angulo+Separacion</mca:CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign>
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">
+                          <mca:CSharpReference x:TypeArguments="x:Int32">i</mca:CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">
+                          <mca:CSharpValue x:TypeArguments="x:Int32">i+1</mca:CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </While>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String">VarBanderas</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String">VarBanderas.Substring(0, VarBanderas.Length - 1)</mca:CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String">VarBanderas</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String">VarBanderas + " ]"</mca:CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+                <Assign>
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="scg:List(x:String)">
+                      <mca:CSharpReference x:TypeArguments="scg:List(x:String)">Archivo</mca:CSharpReference>
+                    </OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="scg:List(x:String)">
+                      <mca:CSharpValue x:TypeArguments="scg:List(x:String)">new List&lt;String&gt;()</mca:CSharpValue>
+                    </InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </Sequence>
+          </State.Entry>
+          <State.Transitions>
+            <Transition DisplayName="Inicio CAVE">
+              <Transition.Trigger>
+                <Sequence DisplayName="Recibir Coordenadas">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="Coordenadas" />
+                  </Sequence.Variables>
+                  <f:ReadString BookmarkName="RtaCave">
+                    <f:ReadString.Result>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mca:CSharpReference x:TypeArguments="x:String">Coordenadas</mca:CSharpReference>
+                      </OutArgument>
+                    </f:ReadString.Result>
+                  </f:ReadString>
+                  <WriteLine>
+                    <InArgument x:TypeArguments="x:String">
+                      <mca:CSharpValue x:TypeArguments="x:String">"L{ \"id\":\""+Escenario+"\" }"</mca:CSharpValue>
+                    </InArgument>
+                  </WriteLine>
+                  <Assign DisplayName="Convert coordinates to PointF">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="sd:PointF">
+                        <mca:CSharpReference x:TypeArguments="sd:PointF">PosicionActual</mca:CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="sd:PointF">
+                        <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(Coordenadas.Split(';')[0].Replace(".", ",")), Single.Parse(Coordenadas.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </Transition.Trigger>
+              <Transition.To>
+                <State x:Name="__ReferenceID5" DisplayName="Detenido">
+                  <State.Entry>
+                    <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;">
+                      <AddToCollection.Item>
+                        <InArgument x:TypeArguments="x:String">
+                          <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString() + ";" + PosicionActual.X.ToString().Replace(",", ".") + ";" + PosicionActual.Y.ToString().Replace(",", ".") + ",DET"</mca:CSharpValue>
+                        </InArgument>
+                      </AddToCollection.Item>
+                      <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                        <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                      </InArgument>
+                    </AddToCollection>
+                  </State.Entry>
+                  <State.Transitions>
+                    <Transition DisplayName="centro">
+                      <Transition.Trigger>
+                        <Sequence DisplayName="Recibir Coordenadas">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="Coordenadas" />
+                          </Sequence.Variables>
+                          <f:ReadString BookmarkName="RtaCave">
+                            <f:ReadString.Result>
+                              <OutArgument x:TypeArguments="x:String">
+                                <mca:CSharpReference x:TypeArguments="x:String">Coordenadas</mca:CSharpReference>
+                              </OutArgument>
+                            </f:ReadString.Result>
+                          </f:ReadString>
+                          <Assign DisplayName="Convert coordinates to PointF">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="sd:PointF">
+                                <mca:CSharpReference x:TypeArguments="sd:PointF">PosicionActual</mca:CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="sd:PointF">
+                                <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(Coordenadas.Split(';')[0].Replace(".", ",")), Single.Parse(Coordenadas.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </Transition.Trigger>
+                      <Transition.Condition>
+                        <mca:CSharpValue x:TypeArguments="x:Boolean">(Math.Sqrt(Math.Pow(PosicionActual.X, 2) + Math.Pow(PosicionActual.Y, 2))) &lt;= DistanciaPermitida</mca:CSharpValue>
+                      </Transition.Condition>
+                      <Transition.To>
+                        <State x:Name="__ReferenceID0" DisplayName="Buscando">
+                          <State.Entry>
+                            <Sequence>
+                              <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;">
+                                <AddToCollection.Item>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <mca:CSharpValue x:TypeArguments="x:String" xml:space="preserve">DateTime.Now.ToString() + ";" 
+                + PosicionActual.X.ToString().Replace(",", ".") 
+                + ";" + PosicionActual.Y.ToString().Replace(",", ".") 
+                + ";BUS"</mca:CSharpValue>
+                                  </InArgument>
+                                </AddToCollection.Item>
+                                <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                  <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                </InArgument>
+                              </AddToCollection>
+                              <Assign>
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <mca:CSharpReference x:TypeArguments="x:String">captura</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">N</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Sequence>
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:Int32" Name="i" />
+                                </Sequence.Variables>
+                                <Assign>
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">
+                                      <mca:CSharpReference x:TypeArguments="x:Int32">i</mca:CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <While>
+                                  <While.Condition>
+                                    <mca:CSharpValue x:TypeArguments="x:Boolean">captura.Equals("N") &amp;&amp; i&lt;UbicacionBanderas.Count</mca:CSharpValue>
+                                  </While.Condition>
+                                  <Sequence>
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="sd:PointF" Name="item" />
+                                    </Sequence.Variables>
+                                    <Assign>
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="sd:PointF">
+                                          <mca:CSharpReference x:TypeArguments="sd:PointF">item</mca:CSharpReference>
+                                        </OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="sd:PointF">
+                                          <mca:CSharpValue x:TypeArguments="sd:PointF">UbicacionBanderas.ElementAt(i)</mca:CSharpValue>
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <If>
+                                      <If.Condition>
+                                        <InArgument x:TypeArguments="x:Boolean">
+                                          <mca:CSharpValue x:TypeArguments="x:Boolean">Math.Sqrt(Math.Pow(PosicionActual.X - item.X, 2) + Math.Pow(PosicionActual.Y - item.Y, 2))&lt;DistanciaPermitida</mca:CSharpValue>
+                                        </InArgument>
+                                      </If.Condition>
+                                      <If.Then>
+                                        <Sequence>
+                                          <Assign>
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">
+                                                <mca:CSharpReference x:TypeArguments="x:String">captura</mca:CSharpReference>
+                                              </OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">S</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <WriteLine>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + IdBandera.ElementAt(i) + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                            </InArgument>
+                                          </WriteLine>
+                                          <RemoveFromCollection x:TypeArguments="sd:PointF" DisplayName="RemoveFromCollection&lt;PointF&gt;">
+                                            <RemoveFromCollection.Item>
+                                              <InArgument x:TypeArguments="sd:PointF">
+                                                <mca:CSharpValue x:TypeArguments="sd:PointF">item</mca:CSharpValue>
+                                              </InArgument>
+                                            </RemoveFromCollection.Item>
+                                            <InArgument x:TypeArguments="scg:ICollection(sd:PointF)">
+                                              <mca:CSharpValue x:TypeArguments="scg:ICollection(sd:PointF)">UbicacionBanderas</mca:CSharpValue>
+                                            </InArgument>
+                                          </RemoveFromCollection>
+                                          <RemoveFromCollection x:TypeArguments="x:Int32">
+                                            <RemoveFromCollection.Item>
+                                              <InArgument x:TypeArguments="x:Int32">
+                                                <mca:CSharpValue x:TypeArguments="x:Int32">IdBandera.ElementAt(i)</mca:CSharpValue>
+                                              </InArgument>
+                                            </RemoveFromCollection.Item>
+                                            <InArgument x:TypeArguments="scg:ICollection(x:Int32)">
+                                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:Int32)">IdBandera</mca:CSharpValue>
+                                            </InArgument>
+                                          </RemoveFromCollection>
+                                        </Sequence>
+                                      </If.Then>
+                                    </If>
+                                    <Assign>
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">
+                                          <mca:CSharpReference x:TypeArguments="x:Int32">i</mca:CSharpReference>
+                                        </OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">
+                                          <mca:CSharpValue x:TypeArguments="x:Int32">i+1</mca:CSharpValue>
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </While>
+                              </Sequence>
+                            </Sequence>
+                          </State.Entry>
+                          <State.Transitions>
+                            <Transition DisplayName="captura">
+                              <Transition.Trigger>
+                                <Sequence x:Name="__ReferenceID3" DisplayName="Recibir Coordenadas">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:String" Name="Coordenadas" />
+                                  </Sequence.Variables>
+                                  <f:ReadString BookmarkName="RtaCave">
+                                    <f:ReadString.Result>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <mca:CSharpReference x:TypeArguments="x:String">Coordenadas</mca:CSharpReference>
+                                      </OutArgument>
+                                    </f:ReadString.Result>
+                                  </f:ReadString>
+                                  <Assign DisplayName="Convert coordinates to PointF">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="sd:PointF">
+                                        <mca:CSharpReference x:TypeArguments="sd:PointF">PosicionActual</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="sd:PointF">
+                                        <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(Coordenadas.Split(';')[0].Replace(".", ",")), Single.Parse(Coordenadas.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </Transition.Trigger>
+                              <Transition.To>
+                                <State x:Name="__ReferenceID2" DisplayName="Vuelve al Centro">
+                                  <State.Entry>
+                                    <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;">
+                                      <AddToCollection.Item>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <mca:CSharpValue x:TypeArguments="x:String" xml:space="preserve">DateTime.Now.ToString() + ";" 
+                + PosicionActual.X.ToString().Replace(",", ".") + ";" 
+                + PosicionActual.Y.ToString().Replace(",", ".") + ";CEN"</mca:CSharpValue>
+                                        </InArgument>
+                                      </AddToCollection.Item>
+                                      <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                        <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                      </InArgument>
+                                    </AddToCollection>
+                                  </State.Entry>
+                                  <State.Transitions>
+                                    <Transition DisplayName="centro">
+                                      <Transition.Trigger>
+                                        <Sequence x:Name="__ReferenceID1" DisplayName="Recibir Coordenadas">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:String" Name="Coordenadas" />
+                                          </Sequence.Variables>
+                                          <f:ReadString BookmarkName="RtaCave">
+                                            <f:ReadString.Result>
+                                              <OutArgument x:TypeArguments="x:String">
+                                                <mca:CSharpReference x:TypeArguments="x:String">Coordenadas</mca:CSharpReference>
+                                              </OutArgument>
+                                            </f:ReadString.Result>
+                                          </f:ReadString>
+                                          <Assign DisplayName="Convert coordinates to PointF">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="sd:PointF">
+                                                <mca:CSharpReference x:TypeArguments="sd:PointF">PosicionActual</mca:CSharpReference>
+                                              </OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="sd:PointF">
+                                                <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(Coordenadas.Split(';')[0].Replace(".", ",")), Single.Parse(Coordenadas.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                              </InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </Transition.Trigger>
+                                      <Transition.To>
+                                        <x:Reference>__ReferenceID0</x:Reference>
+                                      </Transition.To>
+                                      <Transition.Condition>
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">((Math.Sqrt(Math.Pow(PosicionActual.X, 2) + Math.Pow(PosicionActual.Y, 2))) &lt;= DistanciaPermitida) &amp;&amp; ((UbicacionBanderas.Count != 0))</mca:CSharpValue>
+                                      </Transition.Condition>
+                                    </Transition>
+                                    <Transition Trigger="{x:Reference __ReferenceID1}" DisplayName="Volviendo" To="{x:Reference __ReferenceID2}">
+                                      <Transition.Condition>
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">(Math.Sqrt(Math.Pow(PosicionActual.X, 2) + Math.Pow(PosicionActual.Y, 2))) &gt; DistanciaPermitida</mca:CSharpValue>
+                                      </Transition.Condition>
+                                    </Transition>
+                                    <Transition Trigger="{x:Reference __ReferenceID1}" DisplayName="T1">
+                                      <Transition.Condition>
+                                        <mca:CSharpValue x:TypeArguments="x:Boolean">((Math.Sqrt(Math.Pow(PosicionActual.X, 2) + Math.Pow(PosicionActual.Y, 2))) &lt;= DistanciaPermitida)&amp;&amp;(UbicacionBanderas.Count == 0)</mca:CSharpValue>
+                                      </Transition.Condition>
+                                      <Transition.To>
+                                        <State x:Name="__ReferenceID6" DisplayName="Final" IsFinal="True">
+                                          <State.Entry>
+                                            <Sequence>
+                                              <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;">
+                                                <AddToCollection.Item>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <mca:CSharpValue x:TypeArguments="x:String" xml:space="preserve">DateTime.Now.ToString() + ";" 
+                + PosicionActual.X.ToString().Replace(",", ".") + ";" 
+                + PosicionActual.Y.ToString().Replace(",", ".") + ";FIN"</mca:CSharpValue>
+                                                  </InArgument>
+                                                </AddToCollection.Item>
+                                                <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                  <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                </InArgument>
+                                              </AddToCollection>
+                                              <WriteLine>
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Fin del experimento\" }"</mca:CSharpValue>
+                                                </InArgument>
+                                              </WriteLine>
+                                              <Delay>
+                                                <InArgument x:TypeArguments="x:TimeSpan">
+                                                  <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(5)</mca:CSharpValue>
+                                                </InArgument>
+                                              </Delay>
+                                              <WriteLine Text="hide_question" />
+                                            </Sequence>
+                                          </State.Entry>
+                                        </State>
+                                      </Transition.To>
+                                    </Transition>
+                                  </State.Transitions>
+                                </State>
+                              </Transition.To>
+                              <Transition.Action>
+                                <Sequence>
+                                  <Assign>
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <mca:CSharpReference x:TypeArguments="x:String">captura</mca:CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">N</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </Transition.Action>
+                              <Transition.Condition>
+                                <mca:CSharpValue x:TypeArguments="x:Boolean">captura.Equals("S")</mca:CSharpValue>
+                              </Transition.Condition>
+                            </Transition>
+                            <Transition Trigger="{x:Reference __ReferenceID3}" DisplayName="Busca" To="{x:Reference __ReferenceID0}">
+                              <Transition.Condition>
+                                <mca:CSharpValue x:TypeArguments="x:Boolean">!((UbicacionBanderas.Count &gt;= 1) &amp;&amp; captura.Equals("S"))</mca:CSharpValue>
+                              </Transition.Condition>
+                            </Transition>
+                          </State.Transitions>
+                        </State>
+                      </Transition.To>
+                    </Transition>
+                  </State.Transitions>
+                </State>
+              </Transition.To>
+              <Transition.Action>
+                <WriteLine>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">VarBanderas</mca:CSharpValue>
+                  </InArgument>
+                </WriteLine>
+              </Transition.Action>
+            </Transition>
+          </State.Transitions>
+          <State.Variables>
+            <Variable x:TypeArguments="x:String" Name="VarBanderas" />
+          </State.Variables>
+        </State>
+      </StateMachine.InitialState>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <StateMachine.Variables>
+        <Variable x:TypeArguments="scg1:LinkedList(sd:PointF)" Name="UbicacionBanderas" />
+        <Variable x:TypeArguments="sd:PointF" Name="PosicionActual" />
+        <Variable x:TypeArguments="scg1:LinkedList(x:Int32)" Name="IdBandera" />
+        <Variable x:TypeArguments="x:Int32" Name="DistanciaPermitida" />
+        <Variable x:TypeArguments="x:String" Name="captura" />
+      </StateMachine.Variables>
+      <sads:DebugSymbol.Symbol>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</sads:DebugSymbol.Symbol>
+    </StateMachine>
+  </h:Activity1.Implementation>
+</h:Activity1>

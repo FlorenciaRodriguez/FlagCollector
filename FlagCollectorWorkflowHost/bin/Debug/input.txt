@@ -1,0 +1,13 @@
+IP(192.168.31.101):127.0.0.1
+Trial(T) o PreTraining(P):P
+Nombre Sujeto:flor1
+Radio:20
+Cantidad de Banderas:360
+Separacion:1
+Color Bandera (rojo/amarillo/verde):rojo
+Escenario(1-11,null):5
+Nro Protocolo:0
+Angulos:60
+Test Memoria (1Si/2No/3Solo Evaluar):1
+Lateralidad(I/D/M):M
+Pares(S/N):S

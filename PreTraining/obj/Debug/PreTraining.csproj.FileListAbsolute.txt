@@ -1,0 +1,16 @@
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\bin\Debug\PreTraining.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\bin\Debug\PreTraining.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining.g.xaml
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining_PreTraining_BeforeInitializeComponentHelper.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\_PreTraining.g.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining.g.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining_PreTraining_BeforeInitializeComponentHelper.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining.csproj.XamlGeneratedCodeFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining.csproj.XamlGeneratedXamlFileListAbsolute.txt
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining_PreTraining_CompiledExpressionRoot.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\bin\Debug\Ejercicio.dll
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\bin\Debug\Ejercicio.pdb
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining.csprojResolveAssemblyReference.cache

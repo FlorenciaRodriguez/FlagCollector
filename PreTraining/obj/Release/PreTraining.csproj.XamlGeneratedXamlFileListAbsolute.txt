@@ -1,0 +1,2 @@
+obj\Release\PreTraining.g.xaml
+obj\Release\PreTraining_PreTraining_BeforeInitializeComponentHelper.txt

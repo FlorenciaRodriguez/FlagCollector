@@ -1,0 +1,4 @@
+obj\Debug\_PreTraining.g.cs
+obj\Debug\PreTraining.g.cs
+obj\Debug\PreTraining_PreTraining_BeforeInitializeComponentHelper.cs
+C:\Users\DellPladema\Desktop\Nueva carpeta (2)\VFinal\WFFlagCollector\FlagCollector\PreTraining\obj\Debug\PreTraining_PreTraining_CompiledExpressionRoot.cs

@@ -1,0 +1,1891 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="ProtocoloSimple.Activity1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:local="clr-namespace:FlagCollectorWorkflowActivities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Angulo" Type="InArgument(s:Int32[])" />
+    <x:Property Name="Radio" Type="InArgument(x:Int32)" />
+    <x:Property Name="Archivo" Type="OutArgument(scg:List(x:String))" />
+    <x:Property Name="NroProtocolo" Type="InArgument(x:Int32)" />
+    <x:Property Name="Protocolo_P1" Type="InArgument(s:Int32[])" />
+    <x:Property Name="BanderasCircunferencia" Type="InArgument(scg:List(sd:PointF))" />
+    <x:Property Name="ColorBandera" Type="InArgument(x:String)" />
+    <x:Property Name="ColorSeleccion" Type="InArgument(x:String)" />
+    <x:Property Name="Mostrar180" Type="InArgument(x:String)" />
+    <x:Property Name="Agregar180" Type="InArgument(x:String)" />
+    <x:Property Name="IdSujeto" Type="InArgument(x:String)" />
+    <x:Property Name="TestMemoria" Type="InArgument(x:String)" />
+    <x:Property Name="Separacion" Type="InArgument(x:Int32)" />
+    <x:Property Name="Escenario" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ProtocoloSimple.Activity1_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Drawing</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>ProtocoloSimple</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <StateMachine sap2010:WorkflowViewState.IdRef="StateMachine_1">
+    <StateMachine.InitialState>
+      <State x:Name="__ReferenceID14" DisplayName="Iniciar Variables" sap2010:WorkflowViewState.IdRef="State_1">
+        <State.Entry>
+          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_22">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">
+                  <mca:CSharpReference x:TypeArguments="x:Int32">Cercania</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_34">
+              <Assign.To>
+                <OutArgument x:TypeArguments="scg:List(x:String)">
+                  <mca:CSharpReference x:TypeArguments="scg:List(x:String)">Archivo</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="scg:List(x:String)">
+                  <mca:CSharpValue x:TypeArguments="scg:List(x:String)">new List&lt;string&gt;();</mca:CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_24">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">
+                  <mca:CSharpReference x:TypeArguments="x:Int32">NroPrueba</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_25">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">
+                  <mca:CSharpReference x:TypeArguments="x:Int32">IBanderaPar</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_27">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:Int32[]">
+                  <mca:CSharpReference x:TypeArguments="s:Int32[]">BanderasExperimento</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:Int32[]">
+                  <mca:CSharpValue x:TypeArguments="s:Int32[]">new int[2]</mca:CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_28">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:Boolean[]">
+                  <mca:CSharpReference x:TypeArguments="s:Boolean[]">BanderasVisibles</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:Boolean[]">
+                  <mca:CSharpValue x:TypeArguments="s:Boolean[]">new bool[2]</mca:CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_45">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:PointF">
+                  <mca:CSharpReference x:TypeArguments="sd:PointF">Cruz</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:PointF">
+                  <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(0,0)</mca:CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_49">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">
+                  <mca:CSharpReference x:TypeArguments="x:Int32">idNueva</mca:CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">180</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </State.Entry>
+        <State.Transitions>
+          <Transition DisplayName="Inició Cave" sap2010:WorkflowViewState.IdRef="Transition_7">
+            <Transition.Trigger>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_33">
+                <local:ReadString BookmarkName="RtaCave" sap2010:WorkflowViewState.IdRef="ReadString_7">
+                  <local:ReadString.Result>
+                    <OutArgument x:TypeArguments="x:String">
+                      <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                    </OutArgument>
+                  </local:ReadString.Result>
+                </local:ReadString>
+              </Sequence>
+            </Transition.Trigger>
+            <Transition.To>
+              <State x:Name="__ReferenceID6" DisplayName="Detenido" sap2010:WorkflowViewState.IdRef="State_7">
+                <State.Entry>
+                  <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_113" Text="hide_question" />
+                </State.Entry>
+                <State.Exit>
+                  <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1">
+                    <AddToCollection.Item>
+                      <InArgument x:TypeArguments="x:String">
+                        <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString()+";"+Coordenadas.X+";"+Coordenadas.Y+";NULL;NULL;NULL;DET"</mca:CSharpValue>
+                      </InArgument>
+                    </AddToCollection.Item>
+                    <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                      <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                    </InArgument>
+                  </AddToCollection>
+                </State.Exit>
+                <State.Transitions>
+                  <Transition DisplayName="Mostrar banderas" sap2010:WorkflowViewState.IdRef="Transition_3">
+                    <Transition.Trigger>
+                      <Sequence DisplayName="Recibir Coordenadas" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                        <local:ReadString BookmarkName="RtaCave" sap2010:WorkflowViewState.IdRef="ReadString_13">
+                          <local:ReadString.Result>
+                            <OutArgument x:TypeArguments="x:String">
+                              <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                            </OutArgument>
+                          </local:ReadString.Result>
+                        </local:ReadString>
+                        <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="sd:PointF">
+                              <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="sd:PointF">
+                              <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </Transition.Trigger>
+                    <Transition.To>
+                      <State x:Name="__ReferenceID0" DisplayName="Buscando Bandera" sap2010:WorkflowViewState.IdRef="State_3">
+                        <State.Exit>
+                          <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2">
+                            <AddToCollection.Item>
+                              <InArgument x:TypeArguments="x:String">
+                                <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString()+";"+Coordenadas.X+";"+Coordenadas.Y+";"+"NULL;NULL;NULL;BUS"</mca:CSharpValue>
+                              </InArgument>
+                            </AddToCollection.Item>
+                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                            </InArgument>
+                          </AddToCollection>
+                        </State.Exit>
+                        <State.Transitions>
+                          <Transition DisplayName="" sap2010:WorkflowViewState.IdRef="Transition_11">
+                            <Transition.Trigger>
+                              <Sequence x:Name="__ReferenceID1" DisplayName="Recibir Coordenadas" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <local:ReadString BookmarkName="RtaCave" sap2010:WorkflowViewState.IdRef="ReadString_14">
+                                  <local:ReadString.Result>
+                                    <OutArgument x:TypeArguments="x:String">
+                                      <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                    </OutArgument>
+                                  </local:ReadString.Result>
+                                </local:ReadString>
+                                <Assign sap2010:WorkflowViewState.IdRef="Assign_9">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="sd:PointF">
+                                      <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="sd:PointF">
+                                      <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </Transition.Trigger>
+                            <Transition.To>
+                              <x:Reference>__ReferenceID0</x:Reference>
+                            </Transition.To>
+                            <Transition.Condition>
+                              <mca:CSharpValue x:TypeArguments="x:Boolean">!((((Math.Pow(BanderasCircunferencia[BanderasExperimento[0]].X - Coordenadas.X, 2) + Math.Pow(BanderasCircunferencia[BanderasExperimento[0]].Y - Coordenadas.Y, 2)) &lt; Cercania) &amp;&amp; (BanderasVisibles[0])) || (((Math.Pow(BanderasCircunferencia[BanderasExperimento[1]].X - Coordenadas.X, 2) + Math.Pow(BanderasCircunferencia[BanderasExperimento[1]].Y - Coordenadas.Y, 2)) &lt; Cercania) &amp;&amp; (BanderasVisibles[1])))</mca:CSharpValue>
+                            </Transition.Condition>
+                          </Transition>
+                          <Transition Trigger="{x:Reference __ReferenceID1}" DisplayName="Recolecto" sap2010:WorkflowViewState.IdRef="Transition_2">
+                            <Transition.To>
+                              <State x:Name="__ReferenceID2" DisplayName="Vuelve al centro" sap2010:WorkflowViewState.IdRef="State_2">
+                                <State.Exit>
+                                  <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_7">
+                                    <AddToCollection.Item>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString()+";"+Coordenadas.X+";"+Coordenadas.Y+";"+"NULL;NULL;NULL;CEN"</mca:CSharpValue>
+                                      </InArgument>
+                                    </AddToCollection.Item>
+                                    <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                      <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                    </InArgument>
+                                  </AddToCollection>
+                                </State.Exit>
+                                <State.Transitions>
+                                  <Transition DisplayName="" sap2010:WorkflowViewState.IdRef="Transition_12">
+                                    <Transition.Trigger>
+                                      <Sequence x:Name="__ReferenceID3" DisplayName="Recibir Coordenadas" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                        <local:ReadString BookmarkName="RtaCave" sap2010:WorkflowViewState.IdRef="ReadString_15">
+                                          <local:ReadString.Result>
+                                            <OutArgument x:TypeArguments="x:String">
+                                              <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                            </OutArgument>
+                                          </local:ReadString.Result>
+                                        </local:ReadString>
+                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_13">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="sd:PointF">
+                                              <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="sd:PointF">
+                                              <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </Transition.Trigger>
+                                    <Transition.To>
+                                      <x:Reference>__ReferenceID2</x:Reference>
+                                    </Transition.To>
+                                    <Transition.Condition>
+                                      <mca:CSharpValue x:TypeArguments="x:Boolean">!((Math.Pow(Coordenadas.X-Cruz.X, 2) + Math.Pow(Coordenadas.Y-Cruz.Y, 2)) &lt; Cercania)</mca:CSharpValue>
+                                    </Transition.Condition>
+                                  </Transition>
+                                  <Transition Trigger="{x:Reference __ReferenceID3}" DisplayName="Paso por el centro" sap2010:WorkflowViewState.IdRef="Transition_1" To="{x:Reference __ReferenceID0}">
+                                    <Transition.Action>
+                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_84">
+                                          <InArgument x:TypeArguments="x:String">
+                                            <mca:CSharpValue x:TypeArguments="x:String">"X{ \"value\":\"rojo\" }"</mca:CSharpValue>
+                                          </InArgument>
+                                        </WriteLine>
+                                        <Delay sap2010:WorkflowViewState.IdRef="Delay_2">
+                                          <InArgument x:TypeArguments="x:TimeSpan">
+                                            <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(2);</mca:CSharpValue>
+                                          </InArgument>
+                                        </Delay>
+                                        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_108">
+                                          <InArgument x:TypeArguments="x:String">
+                                            <mca:CSharpValue x:TypeArguments="x:String">"X{ \"value\":\"negro\" }"</mca:CSharpValue>
+                                          </InArgument>
+                                        </WriteLine>
+                                      </Sequence>
+                                    </Transition.Action>
+                                    <Transition.Condition>
+                                      <mca:CSharpValue x:TypeArguments="x:Boolean">((Math.Pow(Coordenadas.X - Cruz.X, 2) + Math.Pow(Coordenadas.Y - Cruz.Y, 2)) &lt; Cercania) &amp;&amp; (NroPrueba &lt; Angulo.Length) &amp;&amp; (IBanderaPar &lt; 2)</mca:CSharpValue>
+                                    </Transition.Condition>
+                                  </Transition>
+                                  <Transition Trigger="{x:Reference __ReferenceID3}" DisplayName="TerminarExperimento" sap2010:WorkflowViewState.IdRef="Transition_9">
+                                    <Transition.Condition>
+                                      <mca:CSharpValue x:TypeArguments="x:Boolean">((Math.Pow(Coordenadas.X-Cruz.X, 2) + Math.Pow(Coordenadas.Y-Cruz.Y, 2)) &lt; Cercania) &amp;&amp; (TestMemoria.Equals("N")) &amp;&amp; (IBanderaPar==2)</mca:CSharpValue>
+                                    </Transition.Condition>
+                                    <Transition.To>
+                                      <State x:Name="__ReferenceID8" DisplayName="FinalState" sap2010:WorkflowViewState.IdRef="State_4" IsFinal="True">
+                                        <State.Entry>
+                                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                            <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_76">
+                                              <InArgument x:TypeArguments="x:String">
+                                                <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Fin del experimento\" }"</mca:CSharpValue>
+                                              </InArgument>
+                                            </WriteLine>
+                                            <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_11">
+                                              <AddToCollection.Item>
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString()+";"+Coordenadas.X+";"+Coordenadas.Y+";"+"NULL;NULL;NULL;FIN"</mca:CSharpValue>
+                                                </InArgument>
+                                              </AddToCollection.Item>
+                                              <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                              </InArgument>
+                                            </AddToCollection>
+                                            <Delay sap2010:WorkflowViewState.IdRef="Delay_1">
+                                              <InArgument x:TypeArguments="x:TimeSpan">
+                                                <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(5)</mca:CSharpValue>
+                                              </InArgument>
+                                            </Delay>
+                                            <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_77" Text="hide_question" />
+                                          </Sequence>
+                                        </State.Entry>
+                                      </State>
+                                    </Transition.To>
+                                  </Transition>
+                                  <Transition Trigger="{x:Reference __ReferenceID3}" DisplayName="Termino de recolectar" sap2010:WorkflowViewState.IdRef="Transition_17">
+                                    <Transition.To>
+                                      <State x:Name="__ReferenceID4" DisplayName="Eligiendo bandera" sap2010:WorkflowViewState.IdRef="State_6">
+                                        <State.Entry>
+                                          <If sap2010:WorkflowViewState.IdRef="If_7">
+                                            <If.Condition>
+                                              <InArgument x:TypeArguments="x:Boolean">
+                                                <mca:CSharpValue x:TypeArguments="x:Boolean">NroProtocolo.Equals(2)</mca:CSharpValue>
+                                              </InArgument>
+                                            </If.Condition>
+                                            <If.Then>
+                                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_7">
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <mca:CSharpValue x:TypeArguments="x:String">"C{ \"id\":\"" + (int)(Cursor) + "\", \"color\":\"" + ColorSeleccion + "\" }"</mca:CSharpValue>
+                                                  </InArgument>
+                                                </WriteLine>
+                                              </Sequence>
+                                            </If.Then>
+                                          </If>
+                                        </State.Entry>
+                                        <State.Transitions>
+                                          <Transition DisplayName="No eligio" sap2010:WorkflowViewState.IdRef="Transition_10">
+                                            <Transition.Trigger>
+                                              <Sequence x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                <local:ReadString BookmarkName="RtaCave" sap2010:WorkflowViewState.IdRef="ReadString_16">
+                                                  <local:ReadString.Result>
+                                                    <OutArgument x:TypeArguments="x:String">
+                                                      <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                                    </OutArgument>
+                                                  </local:ReadString.Result>
+                                                </local:ReadString>
+                                              </Sequence>
+                                            </Transition.Trigger>
+                                            <Transition.To>
+                                              <x:Reference>__ReferenceID4</x:Reference>
+                                            </Transition.To>
+                                            <Transition.Action>
+                                              <If sap2010:WorkflowViewState.IdRef="If_19">
+                                                <If.Condition>
+                                                  <InArgument x:TypeArguments="x:Boolean">
+                                                    <mca:CSharpValue x:TypeArguments="x:Boolean">NroProtocolo==2</mca:CSharpValue>
+                                                  </InArgument>
+                                                </If.Condition>
+                                                <If.Then>
+                                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                                    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_33">
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <mca:CSharpValue x:TypeArguments="x:String">"C{ \"id\":\"" + (int)(Cursor) + "\", \"color\":\"" + ColorBandera + "\" }"</mca:CSharpValue>
+                                                      </InArgument>
+                                                    </WriteLine>
+                                                    <If sap2010:WorkflowViewState.IdRef="If_20">
+                                                      <If.Condition>
+                                                        <InArgument x:TypeArguments="x:Boolean">
+                                                          <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("1")</mca:CSharpValue>
+                                                        </InArgument>
+                                                      </If.Condition>
+                                                      <If.Then>
+                                                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                          <Assign sap2010:WorkflowViewState.IdRef="Assign_31">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:Int32">
+                                                                <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                              </OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:Int32">
+                                                                <mca:CSharpValue x:TypeArguments="x:Int32">(Cursor - 1) % BanderasCircunferencia.Count</mca:CSharpValue>
+                                                              </InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
+                                                          <If sap2010:WorkflowViewState.IdRef="If_21">
+                                                            <If.Condition>
+                                                              <InArgument x:TypeArguments="x:Boolean">
+                                                                <mca:CSharpValue x:TypeArguments="x:Boolean">Cursor&lt;0</mca:CSharpValue>
+                                                              </InArgument>
+                                                            </If.Condition>
+                                                            <If.Then>
+                                                              <Assign sap2010:WorkflowViewState.IdRef="Assign_35">
+                                                                <Assign.To>
+                                                                  <OutArgument x:TypeArguments="x:Int32">
+                                                                    <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                                  </OutArgument>
+                                                                </Assign.To>
+                                                                <Assign.Value>
+                                                                  <InArgument x:TypeArguments="x:Int32">
+                                                                    <mca:CSharpValue x:TypeArguments="x:Int32">BanderasCircunferencia.Count-1</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </Assign.Value>
+                                                              </Assign>
+                                                            </If.Then>
+                                                          </If>
+                                                        </Sequence>
+                                                      </If.Then>
+                                                      <If.Else>
+                                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_32">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Int32">
+                                                              <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                            </OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Int32">
+                                                              <mca:CSharpValue x:TypeArguments="x:Int32">(Cursor + 1) % BanderasCircunferencia.Count</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </If.Else>
+                                                    </If>
+                                                  </Sequence>
+                                                </If.Then>
+                                              </If>
+                                            </Transition.Action>
+                                            <Transition.Condition>
+                                              <mca:CSharpValue x:TypeArguments="x:Boolean">(RtaCave.Equals("1") &amp;&amp; (NroProtocolo == 2)) || RtaCave.Equals("3")</mca:CSharpValue>
+                                            </Transition.Condition>
+                                          </Transition>
+                                          <Transition Trigger="{x:Reference __ReferenceID5}" DisplayName="Selección" sap2010:WorkflowViewState.IdRef="Transition_23">
+                                            <Transition.Condition>
+                                              <mca:CSharpValue x:TypeArguments="x:Boolean">(RtaCave.Equals("2") || ((RtaCave.Equals("1") &amp;&amp; NroProtocolo == 1)))</mca:CSharpValue>
+                                            </Transition.Condition>
+                                            <Transition.To>
+                                              <State x:Name="__ReferenceID9" DisplayName="Eligió Bandera" sap2010:WorkflowViewState.IdRef="State_8">
+                                                <State.Entry>
+                                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                    <If sap2010:WorkflowViewState.IdRef="If_41">
+                                                      <If.Condition>
+                                                        <InArgument x:TypeArguments="x:Boolean">
+                                                          <mca:CSharpValue x:TypeArguments="x:Boolean">NroProtocolo.Equals(1)</mca:CSharpValue>
+                                                        </InArgument>
+                                                      </If.Condition>
+                                                      <If.Then>
+                                                        <If sap2010:WorkflowViewState.IdRef="If_40">
+                                                          <If.Condition>
+                                                            <InArgument x:TypeArguments="x:Boolean">
+                                                              <mca:CSharpValue x:TypeArguments="x:Boolean">Protocolo_P1[NroPrueba-1]==1</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </If.Condition>
+                                                          <If.Then>
+                                                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                                              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_95">
+                                                                <InArgument x:TypeArguments="x:String">
+                                                                  <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(BanderasExperimento[0]) + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                                                </InArgument>
+                                                              </WriteLine>
+                                                              <If sap2010:WorkflowViewState.IdRef="If_38">
+                                                                <If.Condition>
+                                                                  <InArgument x:TypeArguments="x:Boolean">
+                                                                    <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("1")</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </If.Condition>
+                                                                <If.Then>
+                                                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                                                    <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_43">
+                                                                      <AddToCollection.Item>
+                                                                        <InArgument x:TypeArguments="x:String">
+                                                                          <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString() + ";" + Coordenadas.X + ";" + Coordenadas.Y + ";NULL;NULL;NO;SEL"</mca:CSharpValue>
+                                                                        </InArgument>
+                                                                      </AddToCollection.Item>
+                                                                      <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                                        <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                                      </InArgument>
+                                                                    </AddToCollection>
+                                                                  </Sequence>
+                                                                </If.Then>
+                                                                <If.Else>
+                                                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                                    <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_44">
+                                                                      <AddToCollection.Item>
+                                                                        <InArgument x:TypeArguments="x:String">
+                                                                          <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString()+";"+Coordenadas.X+";"+Coordenadas.Y+";NULL;NULL;OK;SEL"</mca:CSharpValue>
+                                                                        </InArgument>
+                                                                      </AddToCollection.Item>
+                                                                      <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                                        <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                                      </InArgument>
+                                                                    </AddToCollection>
+                                                                  </Sequence>
+                                                                </If.Else>
+                                                              </If>
+                                                            </Sequence>
+                                                          </If.Then>
+                                                          <If.Else>
+                                                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                                              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_96">
+                                                                <InArgument x:TypeArguments="x:String">
+                                                                  <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(medio) + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                                                </InArgument>
+                                                              </WriteLine>
+                                                              <If sap2010:WorkflowViewState.IdRef="If_39">
+                                                                <If.Condition>
+                                                                  <InArgument x:TypeArguments="x:Boolean">
+                                                                    <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("2")</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </If.Condition>
+                                                                <If.Then>
+                                                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                                                    <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_45">
+                                                                      <AddToCollection.Item>
+                                                                        <InArgument x:TypeArguments="x:String">
+                                                                          <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString()+";"+Coordenadas.X+";"+Coordenadas.Y+";NULL;NULL;OK;SEL"</mca:CSharpValue>
+                                                                        </InArgument>
+                                                                      </AddToCollection.Item>
+                                                                      <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                                        <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                                      </InArgument>
+                                                                    </AddToCollection>
+                                                                  </Sequence>
+                                                                </If.Then>
+                                                                <If.Else>
+                                                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                                                    <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_46">
+                                                                      <AddToCollection.Item>
+                                                                        <InArgument x:TypeArguments="x:String">
+                                                                          <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString()+";"+Coordenadas.X+";"+Coordenadas.Y+";NULL;NULL;NO;SEL"</mca:CSharpValue>
+                                                                        </InArgument>
+                                                                      </AddToCollection.Item>
+                                                                      <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                                        <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                                      </InArgument>
+                                                                    </AddToCollection>
+                                                                  </Sequence>
+                                                                </If.Else>
+                                                              </If>
+                                                            </Sequence>
+                                                          </If.Else>
+                                                        </If>
+                                                      </If.Then>
+                                                      <If.Else>
+                                                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                                          <If sap2010:WorkflowViewState.IdRef="If_42">
+                                                            <If.Condition>
+                                                              <InArgument x:TypeArguments="x:Boolean">
+                                                                <mca:CSharpValue x:TypeArguments="x:Boolean">NroProtocolo.Equals(2)</mca:CSharpValue>
+                                                              </InArgument>
+                                                            </If.Condition>
+                                                            <If.Then>
+                                                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                                <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_47">
+                                                                  <AddToCollection.Item>
+                                                                    <InArgument x:TypeArguments="x:String">
+                                                                      <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString() + ";" + Coordenadas.X + ";" + Coordenadas.Y + ";" + BanderasCircunferencia.ElementAt(Cursor).X + ";" + BanderasCircunferencia.ElementAt(Cursor).Y + ";" + Cursor + ";SEL"</mca:CSharpValue>
+                                                                    </InArgument>
+                                                                  </AddToCollection.Item>
+                                                                  <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                                    <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </AddToCollection>
+                                                                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_105">
+                                                                  <InArgument x:TypeArguments="x:String">
+                                                                    <mca:CSharpValue x:TypeArguments="x:String">"C{ \"id\":\"" + (int)(Cursor) + "\", \"color\":\"" + ColorBandera + "\" }"</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </WriteLine>
+                                                                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_106">
+                                                                  <InArgument x:TypeArguments="x:String">
+                                                                    <mca:CSharpValue x:TypeArguments="x:String">Mostrar180.Replace("true", "false")</mca:CSharpValue>
+                                                                  </InArgument>
+                                                                </WriteLine>
+                                                              </Sequence>
+                                                            </If.Then>
+                                                            <If.Else>
+                                                              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_132" Text="Pasa" />
+                                                            </If.Else>
+                                                          </If>
+                                                        </Sequence>
+                                                      </If.Else>
+                                                    </If>
+                                                  </Sequence>
+                                                </State.Entry>
+                                                <State.Transitions>
+                                                  <Transition DisplayName="Proximo par" sap2010:WorkflowViewState.IdRef="Transition_20">
+                                                    <Transition.Trigger>
+                                                      <Sequence x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                                        <local:ReadString BookmarkName="RtaCave" sap2010:WorkflowViewState.IdRef="ReadString_18">
+                                                          <local:ReadString.Result>
+                                                            <OutArgument x:TypeArguments="x:String">
+                                                              <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                                            </OutArgument>
+                                                          </local:ReadString.Result>
+                                                        </local:ReadString>
+                                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_44">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="sd:PointF">
+                                                              <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                                            </OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="sd:PointF">
+                                                              <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </Transition.Trigger>
+                                                    <Transition.To>
+                                                      <x:Reference>__ReferenceID6</x:Reference>
+                                                    </Transition.To>
+                                                    <Transition.Condition>
+                                                      <mca:CSharpValue x:TypeArguments="x:Boolean">(Angulo.Length &gt; NroPrueba)</mca:CSharpValue>
+                                                    </Transition.Condition>
+                                                  </Transition>
+                                                  <Transition Trigger="{x:Reference __ReferenceID7}" DisplayName="Terminr experimento" sap2010:WorkflowViewState.IdRef="Transition_22" To="{x:Reference __ReferenceID8}">
+                                                    <Transition.Condition>
+                                                      <mca:CSharpValue x:TypeArguments="x:Boolean">(Angulo.Length &lt;= NroPrueba)</mca:CSharpValue>
+                                                    </Transition.Condition>
+                                                  </Transition>
+                                                </State.Transitions>
+                                              </State>
+                                            </Transition.To>
+                                          </Transition>
+                                        </State.Transitions>
+                                      </State>
+                                    </Transition.To>
+                                    <Transition.Action>
+                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                        <If sap2010:WorkflowViewState.IdRef="If_25">
+                                          <If.Condition>
+                                            <InArgument x:TypeArguments="x:Boolean">
+                                              <mca:CSharpValue x:TypeArguments="x:Boolean">NroProtocolo.Equals(2)</mca:CSharpValue>
+                                            </InArgument>
+                                          </If.Condition>
+                                          <If.Then>
+                                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                              <Assign sap2010:WorkflowViewState.IdRef="Assign_38">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Int32">
+                                                    <mca:CSharpReference x:TypeArguments="x:Int32">Cursor</mca:CSharpReference>
+                                                  </OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <WriteLine DisplayName="WriteLine" sap2010:WorkflowViewState.IdRef="WriteLine_109">
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Escucha la consigna\" }"</mca:CSharpValue>
+                                                </InArgument>
+                                              </WriteLine>
+                                              <Delay sap2010:WorkflowViewState.IdRef="Delay_4">
+                                                <InArgument x:TypeArguments="x:TimeSpan">
+                                                  <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(4)</mca:CSharpValue>
+                                                </InArgument>
+                                              </Delay>
+                                              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_114" Text="hide_question" />
+                                              <WriteLine DisplayName="WriteLine" sap2010:WorkflowViewState.IdRef="WriteLine_115">
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\" \" }"</mca:CSharpValue>
+                                                </InArgument>
+                                              </WriteLine>
+                                              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_62">
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <mca:CSharpValue x:TypeArguments="x:String">Mostrar180</mca:CSharpValue>
+                                                </InArgument>
+                                              </WriteLine>
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                              <WriteLine DisplayName="WriteLine" sap2010:WorkflowViewState.IdRef="WriteLine_63">
+                                                <InArgument x:TypeArguments="x:String">
+                                                  <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Esta la bandera en una nueva posicion?\" }"</mca:CSharpValue>
+                                                </InArgument>
+                                              </WriteLine>
+                                              <If sap2010:WorkflowViewState.IdRef="If_24">
+                                                <If.Condition>
+                                                  <InArgument x:TypeArguments="x:Boolean">
+                                                    <mca:CSharpValue x:TypeArguments="x:Boolean">Protocolo_P1[NroPrueba]==1</mca:CSharpValue>
+                                                  </InArgument>
+                                                </If.Condition>
+                                                <If.Then>
+                                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                                    <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_30">
+                                                      <AddToCollection.Item>
+                                                        <InArgument x:TypeArguments="x:String">
+                                                          <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString() + ";" + Coordenadas.X + ";" + Coordenadas.Y + ";" + BanderasCircunferencia[BanderasExperimento[0]].X + ";" + BanderasCircunferencia[BanderasExperimento[0]].Y + ";" + BanderasExperimento[0] + ";MOS"</mca:CSharpValue>
+                                                        </InArgument>
+                                                      </AddToCollection.Item>
+                                                      <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                        <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                      </InArgument>
+                                                    </AddToCollection>
+                                                    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_65">
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(BanderasExperimento[0]) + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                                      </InArgument>
+                                                    </WriteLine>
+                                                  </Sequence>
+                                                </If.Then>
+                                                <If.Else>
+                                                  <Sequence DisplayName="TestMemoria1" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                    <Assign sap2010:WorkflowViewState.IdRef="Assign_39">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Int32">
+                                                          <mca:CSharpReference x:TypeArguments="x:Int32">medio</mca:CSharpReference>
+                                                        </OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Int32">
+                                                          <mca:CSharpValue x:TypeArguments="x:Int32">Math.Abs(BanderasExperimento[0] + BanderasExperimento[1]) / 2</mca:CSharpValue>
+                                                        </InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_31">
+                                                      <AddToCollection.Item>
+                                                        <InArgument x:TypeArguments="x:String">
+                                                          <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString() + ";" + Coordenadas.X + ";" + Coordenadas.Y + ";" + BanderasCircunferencia[medio].X + ";" + BanderasCircunferencia[medio].Y + ";" + medio+ ";MOS"</mca:CSharpValue>
+                                                        </InArgument>
+                                                      </AddToCollection.Item>
+                                                      <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                        <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                      </InArgument>
+                                                    </AddToCollection>
+                                                    <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_67">
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(medio) + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                                      </InArgument>
+                                                    </WriteLine>
+                                                  </Sequence>
+                                                </If.Else>
+                                              </If>
+                                            </Sequence>
+                                          </If.Else>
+                                        </If>
+                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_42">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Int32">
+                                              <mca:CSharpReference x:TypeArguments="x:Int32">NroPrueba</mca:CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Int32">
+                                              <mca:CSharpValue x:TypeArguments="x:Int32">NroPrueba+1</mca:CSharpValue>
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_43">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Int32">
+                                              <mca:CSharpReference x:TypeArguments="x:Int32">IBanderaPar</mca:CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </Transition.Action>
+                                    <Transition.Condition>
+                                      <mca:CSharpValue x:TypeArguments="x:Boolean">((Math.Pow(Coordenadas.X-Cruz.X, 2) + Math.Pow(Coordenadas.Y-Cruz.Y, 2)) &lt; Cercania)&amp;&amp;(IBanderaPar == 2) &amp;&amp; (Angulo.Length &gt; NroPrueba) &amp;&amp; (NroProtocolo!=3)</mca:CSharpValue>
+                                    </Transition.Condition>
+                                  </Transition>
+                                  <Transition Trigger="{x:Reference __ReferenceID3}" DisplayName="T1" sap2010:WorkflowViewState.IdRef="Transition_24">
+                                    <Transition.To>
+                                      <State x:Name="__ReferenceID11" DisplayName="Colocar Bandera" sap2010:WorkflowViewState.IdRef="State_9">
+                                        <State.Entry>
+                                          <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_48">
+                                            <AddToCollection.Item>
+                                              <InArgument x:TypeArguments="x:String">
+                                                <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString()+";"+Coordenadas.X+";"+Coordenadas.Y+";NULL;NULL;NULL;DEP"</mca:CSharpValue>
+                                              </InArgument>
+                                            </AddToCollection.Item>
+                                            <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                              <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                            </InArgument>
+                                          </AddToCollection>
+                                        </State.Entry>
+                                        <State.Transitions>
+                                          <Transition DisplayName="T2" sap2010:WorkflowViewState.IdRef="Transition_25">
+                                            <Transition.Trigger>
+                                              <Sequence x:Name="__ReferenceID13" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                                <local:ReadString BookmarkName="RtaCave" sap2010:WorkflowViewState.IdRef="ReadString_19">
+                                                  <local:ReadString.Result>
+                                                    <OutArgument x:TypeArguments="x:String">
+                                                      <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                                    </OutArgument>
+                                                  </local:ReadString.Result>
+                                                </local:ReadString>
+                                              </Sequence>
+                                            </Transition.Trigger>
+                                            <Transition.To>
+                                              <State x:Name="__ReferenceID12" DisplayName="Confirmar Posicion" sap2010:WorkflowViewState.IdRef="State_10">
+                                                <State.Entry>
+                                                  <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_50">
+                                                    <AddToCollection.Item>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString() + ";" + Coordenadas.X + ";" + Coordenadas.Y + ";" + BanderasCircunferencia.ElementAt(Cursor).X + ";" + BanderasCircunferencia.ElementAt(Cursor).Y + ";" + Cursor + ";CON"</mca:CSharpValue>
+                                                      </InArgument>
+                                                    </AddToCollection.Item>
+                                                    <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                      <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </AddToCollection>
+                                                </State.Entry>
+                                                <State.Transitions>
+                                                  <Transition DisplayName="T4" sap2010:WorkflowViewState.IdRef="Transition_27">
+                                                    <Transition.Trigger>
+                                                      <Sequence x:Name="__ReferenceID10" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                                        <local:ReadString BookmarkName="RtaCave" sap2010:WorkflowViewState.IdRef="ReadString_20">
+                                                          <local:ReadString.Result>
+                                                            <OutArgument x:TypeArguments="x:String">
+                                                              <mca:CSharpReference x:TypeArguments="x:String">RtaCave</mca:CSharpReference>
+                                                            </OutArgument>
+                                                          </local:ReadString.Result>
+                                                        </local:ReadString>
+                                                      </Sequence>
+                                                    </Transition.Trigger>
+                                                    <Transition.To>
+                                                      <x:Reference>__ReferenceID9</x:Reference>
+                                                    </Transition.To>
+                                                    <Transition.Action>
+                                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                                        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_124">
+                                                          <InArgument x:TypeArguments="x:String">
+                                                            <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(idNueva-1) + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                                          </InArgument>
+                                                        </WriteLine>
+                                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_51">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="x:Int32">
+                                                              <mca:CSharpReference x:TypeArguments="x:Int32">NroPrueba</mca:CSharpReference>
+                                                            </OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="x:Int32">
+                                                              <mca:CSharpValue x:TypeArguments="x:Int32">NroPrueba+1</mca:CSharpValue>
+                                                            </InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                      </Sequence>
+                                                    </Transition.Action>
+                                                    <Transition.Condition>
+                                                      <mca:CSharpValue x:TypeArguments="x:Boolean">(RtaCave.Equals("1"))</mca:CSharpValue>
+                                                    </Transition.Condition>
+                                                  </Transition>
+                                                  <Transition Trigger="{x:Reference __ReferenceID10}" DisplayName="T5" sap2010:WorkflowViewState.IdRef="Transition_28" To="{x:Reference __ReferenceID11}">
+                                                    <Transition.Action>
+                                                      <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_125">
+                                                        <InArgument x:TypeArguments="x:String">
+                                                          <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(idNueva-1) + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                                        </InArgument>
+                                                      </WriteLine>
+                                                    </Transition.Action>
+                                                    <Transition.Condition>
+                                                      <mca:CSharpValue x:TypeArguments="x:Boolean">(RtaCave.Equals("2"))</mca:CSharpValue>
+                                                    </Transition.Condition>
+                                                  </Transition>
+                                                  <Transition Trigger="{x:Reference __ReferenceID10}" DisplayName="T6" sap2010:WorkflowViewState.IdRef="Transition_29" To="{x:Reference __ReferenceID12}">
+                                                    <Transition.Condition>
+                                                      <mca:CSharpValue x:TypeArguments="x:Boolean">!(RtaCave.Equals("2")) &amp;&amp; !(RtaCave.Equals("1"))</mca:CSharpValue>
+                                                    </Transition.Condition>
+                                                  </Transition>
+                                                </State.Transitions>
+                                              </State>
+                                            </Transition.To>
+                                            <Transition.Action>
+                                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                                <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_49">
+                                                  <AddToCollection.Item>
+                                                    <InArgument x:TypeArguments="x:String">
+                                                      <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString() + ";" + Coordenadas.X + ";" + Coordenadas.Y + ";" + Coordenadas.X + ";" + Coordenadas.Y + ";null;COL"</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </AddToCollection.Item>
+                                                  <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                                    <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                                  </InArgument>
+                                                </AddToCollection>
+                                                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_119">
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <mca:CSharpValue x:TypeArguments="x:String">"A{ \"id\":\"" + idNueva + "\", \"color\":\"" + ColorBandera + "\", \"x\":\"" + Coordenadas.X.ToString(System.Globalization.CultureInfo.InvariantCulture).Replace(",", ".") + "\", \"y\":\"" + Coordenadas.Y.ToString(System.Globalization.CultureInfo.InvariantCulture).Replace(",", ".") + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                                  </InArgument>
+                                                </WriteLine>
+                                                <Assign sap2010:WorkflowViewState.IdRef="Assign_47">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Int32">
+                                                      <mca:CSharpReference x:TypeArguments="x:Int32">idNueva</mca:CSharpReference>
+                                                    </OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Int32">
+                                                      <mca:CSharpValue x:TypeArguments="x:Int32">idNueva+1</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_126" Text="hide_question" />
+                                                <Delay sap2010:WorkflowViewState.IdRef="Delay_7">
+                                                  <InArgument x:TypeArguments="x:TimeSpan">
+                                                    <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(2)</mca:CSharpValue>
+                                                  </InArgument>
+                                                </Delay>
+                                                <WriteLine DisplayName="WriteLine" sap2010:WorkflowViewState.IdRef="WriteLine_127">
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Confirma la posicion (Y)\" }"</mca:CSharpValue>
+                                                  </InArgument>
+                                                </WriteLine>
+                                                <Delay sap2010:WorkflowViewState.IdRef="Delay_9">
+                                                  <InArgument x:TypeArguments="x:TimeSpan">
+                                                    <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(2)</mca:CSharpValue>
+                                                  </InArgument>
+                                                </Delay>
+                                                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_130" Text="hide_question" />
+                                                <WriteLine DisplayName="WriteLine" sap2010:WorkflowViewState.IdRef="WriteLine_131">
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\" \" }"</mca:CSharpValue>
+                                                  </InArgument>
+                                                </WriteLine>
+                                              </Sequence>
+                                            </Transition.Action>
+                                            <Transition.Condition>
+                                              <mca:CSharpValue x:TypeArguments="x:Boolean">RtaCave.Equals("2")</mca:CSharpValue>
+                                            </Transition.Condition>
+                                          </Transition>
+                                          <Transition Trigger="{x:Reference __ReferenceID13}" DisplayName="T3" sap2010:WorkflowViewState.IdRef="Transition_26" To="{x:Reference __ReferenceID11}">
+                                            <Transition.Action>
+                                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                                <If sap2010:WorkflowViewState.IdRef="If_43">
+                                                  <If.Condition>
+                                                    <InArgument x:TypeArguments="x:Boolean">
+                                                      <mca:CSharpValue x:TypeArguments="x:Boolean">!RtaCave.Equals("1") &amp;&amp; !RtaCave.Equals("3") &amp;&amp; !RtaCave.Equals("4")</mca:CSharpValue>
+                                                    </InArgument>
+                                                  </If.Condition>
+                                                  <If.Then>
+                                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_50">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="sd:PointF">
+                                                            <mca:CSharpReference x:TypeArguments="sd:PointF">Coordenadas</mca:CSharpReference>
+                                                          </OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="sd:PointF">
+                                                            <mca:CSharpValue x:TypeArguments="sd:PointF">new PointF(Single.Parse(RtaCave.Split(';')[0].Replace(".", ",")), Single.Parse(RtaCave.Split(';')[1].Replace(".", ",")))</mca:CSharpValue>
+                                                          </InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                </If>
+                                              </Sequence>
+                                            </Transition.Action>
+                                            <Transition.Condition>
+                                              <mca:CSharpValue x:TypeArguments="x:Boolean">!RtaCave.Equals("2")</mca:CSharpValue>
+                                            </Transition.Condition>
+                                          </Transition>
+                                        </State.Transitions>
+                                      </State>
+                                    </Transition.To>
+                                    <Transition.Action>
+                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                        <WriteLine DisplayName="WriteLine" sap2010:WorkflowViewState.IdRef="WriteLine_116">
+                                          <InArgument x:TypeArguments="x:String">
+                                            <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\"Coloca la bandera\" }"</mca:CSharpValue>
+                                          </InArgument>
+                                        </WriteLine>
+                                        <Delay sap2010:WorkflowViewState.IdRef="Delay_8">
+                                          <InArgument x:TypeArguments="x:TimeSpan">
+                                            <mca:CSharpValue x:TypeArguments="x:TimeSpan">TimeSpan.FromSeconds(4)</mca:CSharpValue>
+                                          </InArgument>
+                                        </Delay>
+                                        <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_128" Text="hide_question" />
+                                        <WriteLine DisplayName="WriteLine" sap2010:WorkflowViewState.IdRef="WriteLine_129">
+                                          <InArgument x:TypeArguments="x:String">
+                                            <mca:CSharpValue x:TypeArguments="x:String">"Q{ \"text\":\" \" }"</mca:CSharpValue>
+                                          </InArgument>
+                                        </WriteLine>
+                                      </Sequence>
+                                    </Transition.Action>
+                                    <Transition.Condition>
+                                      <mca:CSharpValue x:TypeArguments="x:Boolean">((Math.Pow(Coordenadas.X - Cruz.X, 2) + Math.Pow(Coordenadas.Y - Cruz.Y, 2)) &lt; Cercania) &amp;&amp; (IBanderaPar == 2) &amp;&amp; (Angulo.Length &gt; NroPrueba) &amp;&amp; (NroProtocolo.Equals(3))</mca:CSharpValue>
+                                    </Transition.Condition>
+                                  </Transition>
+                                </State.Transitions>
+                              </State>
+                            </Transition.To>
+                            <Transition.Action>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <Assign sap2010:WorkflowViewState.IdRef="Assign_10">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">
+                                      <mca:CSharpReference x:TypeArguments="x:Int32">IBanderaPar</mca:CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">
+                                      <mca:CSharpValue x:TypeArguments="x:Int32">IBanderaPar+1</mca:CSharpValue>
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <If sap2010:WorkflowViewState.IdRef="If_4">
+                                  <If.Condition>
+                                    <InArgument x:TypeArguments="x:Boolean">
+                                      <mca:CSharpValue x:TypeArguments="x:Boolean">(((Math.Pow(BanderasCircunferencia[BanderasExperimento[0]].X - Coordenadas.X, 2) + Math.Pow(BanderasCircunferencia[BanderasExperimento[0]].Y - Coordenadas.Y, 2)) &lt; Cercania) &amp;&amp; (BanderasVisibles[0]))</mca:CSharpValue>
+                                    </InArgument>
+                                  </If.Condition>
+                                  <If.Then>
+                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                      <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_14">
+                                        <InArgument x:TypeArguments="x:String">
+                                          <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(BanderasExperimento[0]) + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                        </InArgument>
+                                      </WriteLine>
+                                      <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_4">
+                                        <AddToCollection.Item>
+                                          <InArgument x:TypeArguments="x:String">
+                                            <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString() + ";" + Coordenadas.X + ";" + Coordenadas.Y + ";" + BanderasCircunferencia[BanderasExperimento[0]].X + ";" + BanderasCircunferencia[BanderasExperimento[0]].Y + ";" + BanderasExperimento[0]+";CAP"</mca:CSharpValue>
+                                          </InArgument>
+                                        </AddToCollection.Item>
+                                        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                          <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                        </InArgument>
+                                      </AddToCollection>
+                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_14">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Boolean">
+                                            <mca:CSharpReference x:TypeArguments="x:Boolean">BanderasVisibles[0]</mca:CSharpReference>
+                                          </OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                      <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_17">
+                                        <InArgument x:TypeArguments="x:String">
+                                          <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(BanderasExperimento[1]) + "\", \"visible\":\"false\" }"</mca:CSharpValue>
+                                        </InArgument>
+                                      </WriteLine>
+                                      <AddToCollection x:TypeArguments="x:String" DisplayName="AddToCollection&lt;String&gt;" sap2010:WorkflowViewState.IdRef="AddToCollection`1_6">
+                                        <AddToCollection.Item>
+                                          <InArgument x:TypeArguments="x:String">
+                                            <mca:CSharpValue x:TypeArguments="x:String">DateTime.Now.ToString() + ";" + Coordenadas.X + ";" + Coordenadas.Y + ";" + BanderasCircunferencia[BanderasExperimento[1]].X + ";" + BanderasCircunferencia[BanderasExperimento[1]].Y + ";" + BanderasExperimento[1]+";CAP"</mca:CSharpValue>
+                                          </InArgument>
+                                        </AddToCollection.Item>
+                                        <InArgument x:TypeArguments="scg:ICollection(x:String)">
+                                          <mca:CSharpValue x:TypeArguments="scg:ICollection(x:String)">Archivo</mca:CSharpValue>
+                                        </InArgument>
+                                      </AddToCollection>
+                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_15">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Boolean">
+                                            <mca:CSharpReference x:TypeArguments="x:Boolean">BanderasVisibles[1]</mca:CSharpReference>
+                                          </OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
+                              </Sequence>
+                            </Transition.Action>
+                            <Transition.Condition>
+                              <mca:CSharpValue x:TypeArguments="x:Boolean">(((Math.Pow(BanderasCircunferencia[BanderasExperimento[0]].X - Coordenadas.X, 2) + Math.Pow(BanderasCircunferencia[BanderasExperimento[0]].Y - Coordenadas.Y, 2)) &lt; Cercania) &amp;&amp; (BanderasVisibles[0])) || (((Math.Pow(BanderasCircunferencia[BanderasExperimento[1]].X - Coordenadas.X, 2) + Math.Pow(BanderasCircunferencia[BanderasExperimento[1]].Y - Coordenadas.Y, 2)) &lt; Cercania) &amp;&amp; (BanderasVisibles[1]))</mca:CSharpValue>
+                            </Transition.Condition>
+                          </Transition>
+                        </State.Transitions>
+                      </State>
+                    </Transition.To>
+                    <Transition.Action>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <If DisplayName="Mostrar Banderas" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If.Condition>
+                            <InArgument x:TypeArguments="x:Boolean">
+                              <mca:CSharpValue x:TypeArguments="x:Boolean">IBanderaPar==0</mca:CSharpValue>
+                            </InArgument>
+                          </If.Condition>
+                          <If.Then>
+                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                              <Assign sap2010:WorkflowViewState.IdRef="Assign_3">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">
+                                    <mca:CSharpReference x:TypeArguments="x:Int32">BanderasExperimento[0]</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">
+                                    <mca:CSharpValue x:TypeArguments="x:Int32">new Random().Next(0, BanderasCircunferencia.Count-1)</mca:CSharpValue>
+                                  </InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_85">
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String">(BanderasCircunferencia.Count - 1).ToString()</mca:CSharpValue>
+                                </InArgument>
+                              </WriteLine>
+                              <Assign sap2010:WorkflowViewState.IdRef="Assign_4">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">
+                                    <mca:CSharpReference x:TypeArguments="x:Boolean">BanderasVisibles[0]</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">
+                                    <mca:CSharpReference x:TypeArguments="x:Boolean">BanderasVisibles[1]</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap2010:WorkflowViewState.IdRef="Assign_6">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">
+                                    <mca:CSharpReference x:TypeArguments="x:Int32">BanderasExperimento[1]</mca:CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">
+                                    <mca:CSharpValue x:TypeArguments="x:Int32">(BanderasExperimento[0] + (int)(Angulo[NroPrueba] / Separacion)) % BanderasCircunferencia.Count</mca:CSharpValue>
+                                  </InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_11">
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(BanderasExperimento[0]) + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                </InArgument>
+                              </WriteLine>
+                              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_12">
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String">"H{ \"id\":\"" + (int)(BanderasExperimento[1]) + "\", \"visible\":\"true\" }"</mca:CSharpValue>
+                                </InArgument>
+                              </WriteLine>
+                            </Sequence>
+                          </If.Then>
+                        </If>
+                      </Sequence>
+                    </Transition.Action>
+                    <Transition.Condition>
+                      <mca:CSharpValue x:TypeArguments="x:Boolean">(IBanderaPar&lt;2)&amp;&amp;(Angulo.Length &gt; NroPrueba)</mca:CSharpValue>
+                    </Transition.Condition>
+                  </Transition>
+                </State.Transitions>
+              </State>
+            </Transition.To>
+            <Transition.Action>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_66">
+                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_43">
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">Agregar180</mca:CSharpValue>
+                  </InArgument>
+                </WriteLine>
+                <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_107">
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String">"L{ \"id\":\""+Escenario+"\" }"</mca:CSharpValue>
+                  </InArgument>
+                </WriteLine>
+              </Sequence>
+            </Transition.Action>
+          </Transition>
+        </State.Transitions>
+      </State>
+    </StateMachine.InitialState>
+    <x:Reference>__ReferenceID14</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID11</x:Reference>
+    <x:Reference>__ReferenceID12</x:Reference>
+    <StateMachine.Variables>
+      <Variable x:TypeArguments="x:String" Name="RtaCave" />
+      <Variable x:TypeArguments="sd:PointF" Name="Coordenadas" />
+      <Variable x:TypeArguments="x:Int32" Name="NroPrueba" />
+      <Variable x:TypeArguments="x:Int32" Name="IBanderaPar" />
+      <Variable x:TypeArguments="s:Int32[]" Name="BanderasExperimento" />
+      <Variable x:TypeArguments="s:Boolean[]" Name="BanderasVisibles" />
+      <Variable x:TypeArguments="x:Int32" Name="Cercania" />
+      <Variable x:TypeArguments="x:Int32" Name="medio" />
+      <Variable x:TypeArguments="x:Int32" Name="Cursor" />
+      <Variable x:TypeArguments="sd:PointF" Name="Cruz" />
+      <Variable x:TypeArguments="x:Int32" Name="idNueva" />
+    </StateMachine.Variables>
+    <sads:DebugSymbol.Symbol>d3JDOlxVc2Vyc1xEZWxsUGxhZGVtYVxEZXNrdG9wXE51ZXZhIGNhcnBldGEgKDIpXFZGaW5hbFxXRkZsYWdDb2xsZWN0b3JcRmxhZ0NvbGxlY3RvclxQcm90b2NvbG9TaW1wbGVcQWN0aXZpdHkxLnhhbWzRAj0D3QkSAgEBPwfECQ8DAcodqgEPsgkXAwGVGtQBF+EIHwMBrRaDAh+JCCcDAfYO7AInoQUvAwHfC80CJ+cCLwMB7wrkAy+dBTcDAeAFrwYn7gcvAwGQAsoGL5IHNwIBAkELmgEWAwGgHp8BD6cBGgMBgx61CQ/ACRoDAcwdrAETrAFlAwHIHa8BE7gBJQMBkx29ARfRASIDAcEcrgkXrgmQAQMBpxzkCBerCSIDAZca1gEb3wEtAwHgGeQBH/gBKgMBjhn+AR/+AYkEAwH0GN0IH90IhgQDAdoYjAgf2ggqAwGvFoUCI44CNQMB+BWTAienAjIDAaYVrQInrQK+AQMBjBXFAifFAosCAwHyFLICJ8ICMgMBoBTKAifKAv4BAwGGFKoGJ6oGoAIDAewTpAUnpwYyAwHmD4UIJ4UIrQIDAcwP8QcngggyAwH4Du4CK/0CMAMBvw6CAy+KAzoDAaIO3AMv3AO5AQMBiA6QAy/ZAzQDAfsL4QMv4QO7AQMB4QvPAivlAjYDAfEK5gMz9QQ+AwHoBvoEN44FQgMBlgaUBTeUBZQBAwH8BZkFN5kFlQEDAeIFsQYrugY9AwGrBb8GL8cGOgMBjgXKBy/KB4EBAwH0BJUHL8cHOgMB/gLqBy/qB4IBAwHkAs8HL+cHOgMBkgLMBjPVBkUDAdsB2gY34gZCAwG+Af0GN/0GiwEDAaQB6AY3+gZCAgFTiQc3iQeLAQIBOYIHN4YHQwIBHo4HN44HrgECAQRCDUsWAwHJIEwNVxYDAZQgWA1hFgMB+B9iDWsWAwHcH2wNdxYDAacfeA2DARYDAfIehAENjwEWAwG9HpABDZkBFgMBoR6gARGmASQDAYQetgkRugkdAwHoHbsJEb8JHQMBzR2sAVOsAWIDAckdtgEXtgFtAwGuHbIBGbIBqAEDAZQdvgEZxAEsAwH3HMUBGdABIgMBwhzlCBmqCR4DAZga3QEf3QF1AwH7GdkBIdkBswEDAeEZ5QEh6wE0AwHEGewBIfcBKgMBjxmNCCGYCCoDAaUYmQgh2QgmAwGwFowCJ4wCfQMBkxaIAimIArsBAwH5FZQCKZoCPAMB3BWbAimmAjIDAacVswIptwI1AwHXFLgCKbwCMQMBvBS9AinBAjUDAaEUpQUpkAYuAwG4EJEGKZwGMgMBgxCdBimmBjIDAecP8gcp9gc1AwGxD/cHKfsHMQMBlg/8Byn8B3sDAZQP/QcpgQg1AwH5DvECMfEChgEDAcAO9QIv+wI6AwHaDoMDMYkDRAMBow6TAzWTA4MBAwH8C5cDM9cDPgMBlgzQAi3UAjkDAcQL1QIt3gI/AwGPC98CLeMCNQMB9ArkAi3kAn4DAfIK5wM19AQ6AwHpBvsEOYEFTAMBzAaCBTmNBUIDAZcGuAYvuAaFAQMBxgW0BjG0BsABAwGsBcAGMcYGRAMBjwWWBzGfB0MDAb8EoAcxpAc9AwGkBKUHMbAHOgMB7wOxBzGxB4MBAwHtA7IHMbYHOQMB0gO3BzG7Bz0DAbcDvAcxwAc5AwGcA8EHMcEHgwEDAZoDwgcxxgc9AwH/AtAHMeYHNgMBkwLTBjfTBo0BAwH2Ac8GOc8GuAIDAdwB2wY54QZMAwG/AekGOe0GRQMBiQHuBjn5BkICAVSEBzuEB7oBAgEfSTdJOAMB5CBFE0VgAwHKIFQTVHQDAa8gTxNPagMBlSBfN184AwGTIFsTW2EDAfkfaTdpOAMB9x9lE2VjAwHdH3QTdFwDAcIfbxNvbQMBqB+AAROAAV8DAY0fexN7bAMB8x6MAROMAWEDAdgehwEThwFeAwG+HpcBN5cBOgMBvB6TAROTAV8DAaIeoAEwoAE5AwGfHqMBF6MBZAMBhR64CRW4CV0DAekdvQkVvQlyAwHOHb4BOL4BQQMBkh3BAR/BAWwDAfgczQEfzQHWAQMB3RzIAR/IAXEDAcMc6Agf6AhsAwGZGuwIHagJKAMBsxrlAUDlAUkDAd8Z6AEn6AF0AwHFGfQBJ/QB3gEDAaoZ7wEn7wF5AwGQGZUIJ5UIcQMBwBiQCCeQCHcDAaYYnAgnnAi4AgMBsRagCCW6CDADAbgXvQgl1wgwAwHLFpQCSJQCUQMB9xWXAi+XAnwDAd0VowIvowLmAQMBwhWeAi+eAoEBAwGoFbUCLbUChAEDAdgUugItugKFAQMBvRS/Ai2/AoUBAwGiFKgFL6gFhAEDAbkQrAUtzAU4AwHhEs8FLY4GOAMB0xCZBi+ZBncDAZ4QlAYvlAZ9AwGEEKQGU6QGVAMBghCgBi+gBn8DAegP9Act9AeQAQMBsg/5By35B4QBAwGXD/wHafwHeAMBlQ//By3/B4ABAwH6DvYCMfoCPQMB2w6DA1CDA1kDAb4OhgM3hgOEAQMBpA6YAzWcA0EDAe0NnQM11gM6AwGXDNICMdIClgEDAcUL3AIx3AKHAQMBqgvYAjPYAsUBAwGQC+ECMeECiAEDAfUK5AJs5AJ7AwHzCuoDO+oDkAEDAeoG7gM5zAQ+AwGOCM8EOfIERAMBhAf7BFj7BGEDAecG/gQ//gSMAQMBzQaKBT+KBfYBAwGyBoUFP4UFkQEDAZgGwAZQwAZZAwGqBcMGN8MGhAEDAZAFnQc1nQeLAQMB2gSZBzeZB/IBAwHABKIHNaIHrAMDAaUErQc3rQd9AwGKBKgHN6gHgwEDAfADsQdxsQeAAQMB7gO0BzW0B4wBAwHTA7kHNbkHnwEDAbgDvgc1vgeMAQMBnQPBB3HBB4ABAwGbA8QHNcQHiAEDAYAD0wc30wfKAQMBlALXBzXkB0ADAa4C2wZY2wZhAwHaAd4GP94GjAEDAcAB6wY96wa8AQMBigH2Bj/2BocBAgFv8QY/8QaNAQIBVe0IH/gIKAMB8hv5CB/9CCsDAdcb/ggfhwkoAwG7G4gJH5EJKAMBnxuSCR+dCSgDAeoangkfogkrAwHPGqMJH6cJKwMBtBqhCCelCDMDAYoYpggnrwg5AwHVF7AIJ7kIMAMBuRe+CCfCCDMDAZ0XwwgnzAg5AwHoFs0IJ9YIMAMBzBatBS+2BTgDAdATtwUvuwU7AwG1E7wFL8AFNwMBmhPBBS/BBYEBAwGYE8IFL8YFOwMB/RLHBS/LBTsDAeIS0AUv1AU7AwHGEtUFL40GNAMB1BD4AjX4AsABAwHcDpoDOZoDwgEDAe4NoAM7oAONAQMBmAykAznGA0QDAecMyQM51ANCAwGyDPEDP/EDmgEDAY8I9QM9ngRIAwHMCaEEPcoESAMBqQjQBDvxBEADAYUH2Ac34wdAAwGvAvUIJfUIlgEDAY0c8Agl8AiAAQMB8xv7CCP7CI4BAwHYG4UJS4UJTwMB1huBCSWBCX8DAbwbjwlLjwlPAwG6G4sJJYsJfwMBoBuaCSWaCcEBAwGFG5UJJZUJgAEDAesaoAkjoAmuAQMB0BqlCSOlCa4BAwG1GqMIK6MItwEDAYsYrQgrrQiBAQMB8BepCC2pCMYCAwHWF7cIU7cIWAMB1BezCC2zCIcBAwG6F8AIK8AItwEDAZ4XyggrygiBAQMBgxfGCC3GCMYCAwHpFtQIU9QIWAMB5xbQCC3QCIcBAwHNFrQFWbQFWgMB6xOwBTWwBYABAwHRE7kFM7kFmAEDAbYTvgUzvgWKAQMBmxPBBW/BBX4DAZkTxAUzxAWGAQMB/hLJBTPJBXsDAeMS0gUz0gWrAQMBxxLYBTXYBY4BAwHVENwFM+wFPgMB9RHvBTOLBj4DAe8QpQM7sANEAwG4DbEDO8UDQAMB6AzRAz/RA6cBAwHNDMwDP8wDigEDAbMM9gM/+gNLAwHUCvsDP50ERAMBzQmiBD+mBEsDAbEJpwQ/yQREAwGqCNMEQdMElgEDAYYH1wQ/7ARKAwGiB+8EP+8EiAEDAaAH4Ac94Af0AQMBygLbBz3bB48BAwGwAt0FNeYFRwMBkRLnBTXrBUEDAfYR8AU1+wU+AwHAEfwFNYUGRwMBixGGBjWKBkEDAfAQrQNBrQOpAQMB0w2oA0GoA4wBAwG5DbQDQbQDiwEDAekMuAM/wwNIAwGDDfgDQ/gDzwEDAdUK/gNF/gOXAQMBzgmCBEONBE4DAZ4KkARDmwROAwHoCaQEQ6QEvgEDAbIJqgRFqgSXAQMBqwiuBEO5BE4DAfsIvARDxwROAwHFCNgEQeEEUwMB2QfiBEHmBE0DAb4H5wRB6wRNAwGjB+8Ef+8EhQEDAaEH5AU55AWPAQMBrBLgBTvgBdYCAwGSEukFOekFxAEDAfcR+AU7+AW1AQMB2xHzBTvzBYUBAwHBEYMGOYMGjwEDAaYR/wU7/wWiAgMBjBGIBjmIBrMBAwHxEMADRcADoAEDAZ4NuwNFuwOQAQMBhA2DBEWMBFcDAZ8KkQRFmgRXAwHpCa8ERbgEVwMB/Ai9BEXGBFcDAcYI3wRF3wSbAQMB9AfbBEfbBMYCAwHaB+QEReQEzgEDAb8H6QRF6QSmAQMBpAeKBEmKBJ8BAwG6CoYES4YE4gEDAaAKmARJmASfAQMBhAqUBEuUBNgBAwHqCbYESbYEnwEDAZcJsgRLsgTYAQMB/QjEBEnEBJ8BAwHhCMAES8AE2AEDAccI</sads:DebugSymbol.Symbol>
+  </StateMachine>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Assign_22" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_34" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_24" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_25" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_27" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_28" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_45" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_49" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_16" sap:VirtualizedContainerService.HintSize="264,900">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ReadString_7" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_33" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_113" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="AddToCollection`1_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ReadString_13" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="264,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToCollection`1_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ReadString_14" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_9" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="264,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_11" sap:VirtualizedContainerService.HintSize="2314,661">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">467,183.05 473.5,183.05 473.5,138.04 449.9,138.04 449.9,149.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">40</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">66</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToCollection`1_7" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ReadString_15" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_13" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_11" sap:VirtualizedContainerService.HintSize="264,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_12" sap:VirtualizedContainerService.HintSize="560,807">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">705.7,210.5 705.7,227 688.6,227 688.6,210.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">31</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_84" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Delay_2" sap:VirtualizedContainerService.HintSize="211,22" />
+      <sap2010:ViewStateData Id="WriteLine_108" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Sequence_67" sap:VirtualizedContainerService.HintSize="233,350">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_1" sap:VirtualizedContainerService.HintSize="870,1047">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">705.7,210.5 705.7,240.5 404.3,240.5 404.3,210.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">35</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_76" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="AddToCollection`1_11" sap:VirtualizedContainerService.HintSize="211,22" />
+      <sap2010:ViewStateData Id="Delay_1" sap:VirtualizedContainerService.HintSize="211,22" />
+      <sap2010:ViewStateData Id="WriteLine_77" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Sequence_48" sap:VirtualizedContainerService.HintSize="233,412">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_4" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">433,279.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_9" sap:VirtualizedContainerService.HintSize="844,807">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">705.7,210.5 705.7,303.9 547,303.9</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">28</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_7" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Sequence_25" sap:VirtualizedContainerService.HintSize="233,186">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_7" sap:VirtualizedContainerService.HintSize="464,336" />
+      <sap2010:ViewStateData Id="ReadString_16" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_32" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_33" sap:VirtualizedContainerService.HintSize="753,62" />
+      <sap2010:ViewStateData Id="Assign_31" sap:VirtualizedContainerService.HintSize="464,62" />
+      <sap2010:ViewStateData Id="Assign_35" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="If_21" sap:VirtualizedContainerService.HintSize="464,212" />
+      <sap2010:ViewStateData Id="Sequence_34" sap:VirtualizedContainerService.HintSize="486,438">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_32" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="If_20" sap:VirtualizedContainerService.HintSize="753,588" />
+      <sap2010:ViewStateData Id="Sequence_26" sap:VirtualizedContainerService.HintSize="775,814">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_19" sap:VirtualizedContainerService.HintSize="935,964" />
+      <sap2010:ViewStateData Id="Transition_10" sap:VirtualizedContainerService.HintSize="1018,1475">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">165,440 190.5,440 190.5,496.04 110.1,496.04 110.1,470.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">43</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_95" sap:VirtualizedContainerService.HintSize="469,62" />
+      <sap2010:ViewStateData Id="AddToCollection`1_43" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_61" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToCollection`1_44" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_62" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_38" sap:VirtualizedContainerService.HintSize="469,296" />
+      <sap2010:ViewStateData Id="Sequence_57" sap:VirtualizedContainerService.HintSize="491,522">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_96" sap:VirtualizedContainerService.HintSize="469,62" />
+      <sap2010:ViewStateData Id="AddToCollection`1_45" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_63" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToCollection`1_46" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_64" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_39" sap:VirtualizedContainerService.HintSize="469,296" />
+      <sap2010:ViewStateData Id="Sequence_58" sap:VirtualizedContainerService.HintSize="491,522">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_40" sap:VirtualizedContainerService.HintSize="1007,672" />
+      <sap2010:ViewStateData Id="AddToCollection`1_47" sap:VirtualizedContainerService.HintSize="211,22" />
+      <sap2010:ViewStateData Id="WriteLine_105" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="WriteLine_106" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Sequence_69" sap:VirtualizedContainerService.HintSize="233,350">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_132" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="If_42" sap:VirtualizedContainerService.HintSize="469,500" />
+      <sap2010:ViewStateData Id="Sequence_59" sap:VirtualizedContainerService.HintSize="491,624">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_41" sap:VirtualizedContainerService.HintSize="1523,822" />
+      <sap2010:ViewStateData Id="Sequence_65" sap:VirtualizedContainerService.HintSize="1545,946">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ReadString_18" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_44" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_60" sap:VirtualizedContainerService.HintSize="264,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_20" sap:VirtualizedContainerService.HintSize="430,723">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">217,290 239,290 239,281.04 248.5,281.04 248.5,211.04 194,211.04 194,204.4 167,204.4</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">68</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_22" sap:VirtualizedContainerService.HintSize="430,723">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">217,290 247,290 247,363 461.5,363 461.5,340.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">19</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_8" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">103,259.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_23" sap:VirtualizedContainerService.HintSize="451,621">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">165,440 195,440 195,379.5 75,379.5 75,305.25 103,305.25</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">57</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_6" sap:VirtualizedContainerService.HintSize="122,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">43,409.5</av:Point>
+            <av:Size x:Key="ShapeSize">122,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">108</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_38" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_109" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Delay_4" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="WriteLine_114" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_115" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_62" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_39" sap:VirtualizedContainerService.HintSize="264,656">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_63" sap:VirtualizedContainerService.HintSize="522,62" />
+      <sap2010:ViewStateData Id="AddToCollection`1_30" sap:VirtualizedContainerService.HintSize="211,22" />
+      <sap2010:ViewStateData Id="WriteLine_65" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Sequence_40" sap:VirtualizedContainerService.HintSize="233,248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_39" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="AddToCollection`1_31" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="WriteLine_67" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_41" sap:VirtualizedContainerService.HintSize="264,350">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_24" sap:VirtualizedContainerService.HintSize="522,500" />
+      <sap2010:ViewStateData Id="Sequence_42" sap:VirtualizedContainerService.HintSize="544,726">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_25" sap:VirtualizedContainerService.HintSize="833,876" />
+      <sap2010:ViewStateData Id="Assign_42" sap:VirtualizedContainerService.HintSize="833,62" />
+      <sap2010:ViewStateData Id="Assign_43" sap:VirtualizedContainerService.HintSize="833,62" />
+      <sap2010:ViewStateData Id="Sequence_49" sap:VirtualizedContainerService.HintSize="855,1204">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_17" sap:VirtualizedContainerService.HintSize="983,1901">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">705.7,210.5 705.7,571 73.5,571 73.5,470.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">19</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToCollection`1_48" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ReadString_19" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_70" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToCollection`1_50" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="ReadString_20" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_73" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_124" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_51" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_76" sap:VirtualizedContainerService.HintSize="264,288">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_27" sap:VirtualizedContainerService.HintSize="430,827">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">437,420.85 464.2,420.85 464.2,350.5 194.2,350.5 194.2,320.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">24</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">63</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_125" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Transition_28" sap:VirtualizedContainerService.HintSize="430,649">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">437,420.85 467,420.85 467,417.8 543,417.8</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">24</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">21</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_29" sap:VirtualizedContainerService.HintSize="430,649">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">437,420.85 467,420.85 467,454.4 437,454.4</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">24</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">68</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_10" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">323,399.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AddToCollection`1_49" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="WriteLine_119" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_47" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_126" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Delay_7" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="WriteLine_127" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Delay_9" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="WriteLine_130" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_131" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_71" sap:VirtualizedContainerService.HintSize="264,882">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_25" sap:VirtualizedContainerService.HintSize="430,1393">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">543,436.1 513,436.1 513,490.5 303,490.5 303,436.1 323,436.1</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">45</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">45</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_50" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_75" sap:VirtualizedContainerService.HintSize="264,186">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_43" sap:VirtualizedContainerService.HintSize="464,336" />
+      <sap2010:ViewStateData Id="Sequence_74" sap:VirtualizedContainerService.HintSize="486,460">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_26" sap:VirtualizedContainerService.HintSize="569,971">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">543,436.1 513,436.1 513,490.5 571.5,490.5 571.5,460.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">45</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">19</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_9" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">543,399.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_116" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Delay_8" sap:VirtualizedContainerService.HintSize="211,22" />
+      <sap2010:ViewStateData Id="WriteLine_128" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="WriteLine_129" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Sequence_68" sap:VirtualizedContainerService.HintSize="233,452">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_24" sap:VirtualizedContainerService.HintSize="1035,1149">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">705.7,210.5 705.7,430 657,430</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">36</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_2" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">643,149.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_10" sap:VirtualizedContainerService.HintSize="553,62" />
+      <sap2010:ViewStateData Id="WriteLine_14" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="AddToCollection`1_4" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_14" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_9" sap:VirtualizedContainerService.HintSize="264,350">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_17" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="AddToCollection`1_6" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_15" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_10" sap:VirtualizedContainerService.HintSize="264,350">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_4" sap:VirtualizedContainerService.HintSize="553,500" />
+      <sap2010:ViewStateData Id="Sequence_8" sap:VirtualizedContainerService.HintSize="575,726">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_2" sap:VirtualizedContainerService.HintSize="2303,1339">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">467,183.05 497,183.05 497,180 643,180</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">40</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_3" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">353,149.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_85" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_11" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="WriteLine_12" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="264,798">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="464,948" />
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="486,1072">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_3" sap:VirtualizedContainerService.HintSize="569,1657">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">167,180 353,180</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">36</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">37</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_7" sap:VirtualizedContainerService.HintSize="114,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">53,149.5</av:Point>
+            <av:Size x:Key="ShapeSize">114,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_43" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="WriteLine_107" sap:VirtualizedContainerService.HintSize="211,62" />
+      <sap2010:ViewStateData Id="Sequence_66" sap:VirtualizedContainerService.HintSize="233,288">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Transition_7" sap:VirtualizedContainerService.HintSize="430,771">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:PointCollection x:Key="ConnectorLocation">110,70.5 110,149.5</av:PointCollection>
+            <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
+            <x:Int32 x:Key="DestConnectionPointIndex">38</x:Int32>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="State_1" sap:VirtualizedContainerService.HintSize="143,61">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">38.5,9.5</av:Point>
+            <av:Size x:Key="ShapeSize">143,61</av:Size>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Double x:Key="StateContainerWidth">129</x:Double>
+            <x:Double x:Key="StateContainerHeight">25</x:Double>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="StateMachine_1" sap:VirtualizedContainerService.HintSize="1008,636">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <x:Double x:Key="StateContainerWidth">994</x:Double>
+            <x:Double x:Key="StateContainerHeight">600</x:Double>
+            <av:PointCollection x:Key="ConnectorLocation">270,40 181.5,40</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ProtocoloSimple.Activity1_1" sap:VirtualizedContainerService.HintSize="1048,716" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

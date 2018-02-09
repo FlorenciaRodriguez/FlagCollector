@@ -1,0 +1,2 @@
+PreTraining.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper
